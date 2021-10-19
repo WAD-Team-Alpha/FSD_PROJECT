@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.module.css"
+import classes from "./App.module.css"
 
 const App = () => {
   return (
-    <div className="center">
-     <h1 className="heading">Starting Files</h1>
+    <div className={classes.center}>
+     <h1 >Starting Files</h1>
     </div>
   );
 }
