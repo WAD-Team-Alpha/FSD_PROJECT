@@ -1,9 +1,10 @@
 import React from "react";
+import "./App.module.css"
 
-function App() {
+const App = () => {
   return (
-    <div >
-     <h1>Starting Files</h1>
+    <div className="center">
+     <h1 className="heading">Starting Files</h1>
     </div>
   );
 }
