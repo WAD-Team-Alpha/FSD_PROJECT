@@ -1,0 +1,46 @@
+.footer {
+    height: 20em;
+    background-color: var(--lightgreen);
+}
+
+.section1 h3 {
+    font-weight: 800;
+    font-size: 1.55em;
+    background-color: var(--blue);
+    padding: .5em;
+    color: var(--light);
+}
+
+.section1 li {
+    font-size: 1.2em;
+    padding-bottom: .5em;
+    padding-top: .2em;
+}
+
+.section2 h3 {
+    font-weight: 800;
+    font-size: 1.55em;
+    background-color: var(--blue);
+    padding: .5em;
+    color: var(--light);
+}
+
+.section2 li {
+    font-size: 1.2em;
+    padding-bottom: .5em;
+    padding-top: .2em;
+}
+
+.section3 h3 {
+    font-weight: 800;
+    font-size: 1.55em;
+    background-color: var(--blue);
+    padding: .5em;
+    color: var(--light);
+}
+
+.section3 li {
+    font-size: 1.2em;
+    padding-bottom: .5em;
+    padding-top: .2em;
+}
