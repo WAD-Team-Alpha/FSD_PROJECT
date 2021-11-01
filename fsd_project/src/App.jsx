@@ -1,15 +1,21 @@
-import React from "react";
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
-function App() {
+import React, { useState } from "react";
+import Signup from "./components/authentication/Signup";
+
+const App = () => {
+  const [signup, setSignup] = useState(false);
+  const [signin, setSignin] = useState(false);
   return (
-    <div >
+    <div>
       <Header />
+      {signup && <Signup />}
+      {/* {signin &&<Signin />} */}
       <Main />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
