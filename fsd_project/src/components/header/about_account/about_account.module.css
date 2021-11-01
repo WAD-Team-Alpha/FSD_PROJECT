@@ -12,6 +12,28 @@
     transition-duration: 0.5s;
 }
 
+.signinbtn {
+    float: right;
+    margin-top: 1em;
+    background-color: var(--green);
+    color: var(--blue);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.signinbtn:hover{
+    background-color: var(--bluegreen);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: var(--light);
+}
+
 .aboutbtn:hover {
     background-color: var(--bluegreen);
     border-radius: 50%;
@@ -62,6 +84,15 @@
     padding: 1em 2em; 
     text-decoration: none;
     display: block;
+}
+
+.account_options a:hover {
+    padding: 1em 2em; 
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
 }
 
 .dropdown_button a:hover {
