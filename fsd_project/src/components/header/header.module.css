@@ -1,0 +1,12 @@
+:root {
+    --blue: #05386B;
+    --bluegreen: #379683;
+    --green: #5CDB95;
+    --lightgreen: #8EE4AF;
+    --light: #EDF5E1;
+}
+
+.header {
+    height: 5em;
+    background-color: var(--blue);
+}

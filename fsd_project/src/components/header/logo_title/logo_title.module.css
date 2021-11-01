@@ -1,0 +1,18 @@
+.logo {
+    background-color: var(--green);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: 0.5em;
+}
+
+.logo:hover {
+    background-color: var(--bluegreen);
+}
+
+.title {
+    color: var(--light);
+}

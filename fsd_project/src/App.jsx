@@ -1,16 +1,19 @@
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
 import React, { useState } from "react";
 import Signup from "./components/authentication/Signup";
-import classes from "./App.module.css";
+
 const App = () => {
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
   return (
     <div>
+      <Header />
       {signup && <Signup />}
       {/* {signin &&<Signin />} */}
-      <div className={classes.center}>
-        <h1>Code For APP</h1>
-      </div>
+      <Main />
+      <Footer />
     </div>
   );
 };
