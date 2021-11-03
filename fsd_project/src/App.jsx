@@ -3,7 +3,7 @@ import Main from './components/main/main';
 import Footer from './components/footer/footer';
 import React, { useState } from "react";
 import Signup from "./components/authentication/Signup";
-
+import Signin from "./components/authentication/Signin";
 const App = () => {
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
@@ -11,7 +11,7 @@ const App = () => {
     <div>
       <Header />
       {signup && <Signup />}
-      {/* {signin &&<Signin />} */}
+      {signin &&<Signin />}
       <Main />
       <Footer />
     </div>
