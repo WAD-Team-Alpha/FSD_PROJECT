@@ -6,7 +6,7 @@ const AboutAccount = (props) => {
   const [signin, setSignin] = useState(props.signin);
   console.log("this is running");
   function showAccountOptions() {
-    classname == classes.hide
+    classname === classes.hide
       ? setClassname(classes.show)
       : setClassname(classes.hide);
   }
