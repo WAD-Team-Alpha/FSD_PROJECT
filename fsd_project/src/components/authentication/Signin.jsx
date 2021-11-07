@@ -1,8 +1,9 @@
 import React from "react";
-import classes from "./Signup.module.css";
+import classes from "./Signin.module.css";
 import { useState } from "react";
+import Signup from "./Signup";
 
-const Signup = (props) => {
+const Signin = (props) => {
   const [passwordShown, setPasswordShown] = useState(false);
 
   const showPass = () => {
@@ -19,7 +20,7 @@ const Signup = (props) => {
           </div>
         </div>
         <h1 style={{ textAlign: "center", marginBottom: "2em" }}>
-          Create your Account
+          Signin to your Account
         </h1>
         <form onSubmit={props.loginHandler}>
           <label htmlFor="username" className={classes.loglabel}>
@@ -44,17 +45,7 @@ const Signup = (props) => {
             placeholder="Enter your password"
           />
           <br />
-          <label htmlFor="cpass" className={classes.loglabel}>
-            Confirm Password
-          </label>
-          <input
-            type={passwordShown ? "text" : "password"}
-            required
-            id="cpass"
-            className={classes.loginput}
-            placeholder="Enter your password again"
-          />
-          <br />
+
           <div className={classes.checkboxdiv}>
             <input
               type="checkbox"
@@ -66,7 +57,7 @@ const Signup = (props) => {
           </div>
           <br />
           <button type="submit" className={classes.logbutton} onClick="#">
-            <span>Sign up</span>
+            <span>Sign in</span>
           </button>
         </form>
 
@@ -74,9 +65,9 @@ const Signup = (props) => {
           <a href="{}">Signin with your Google Account</a>
         </h4>
         <h4 style={{ textAlign: "center", marginTop: "1em", fontSize: "15px" }}>
-          Already have an Account?? Click here to{" "}
-          <button className="btn btn-primary" onClick={props.signinHandler}>
-            Signin
+          Dont have an Account?? Click here to{" "}
+          <button className="btn btn-primary" onClick={props.signupHandler}>
+            SignUp
           </button>
         </h4>
       </div>
@@ -84,4 +75,4 @@ const Signup = (props) => {
   );
 };
 
-export default Signup;
+export default Signin;
