@@ -1,0 +1,129 @@
+.container {
+    position: relative;
+}
+
+.loglabel{
+    margin-left: 5em;
+    padding-top: 1em;
+    font-size: large;
+
+}
+
+.loginput {
+    width: 350px;
+    margin-left: 5em;
+    
+}
+
+.logbutton{
+    border-radius: 4px;
+    background-color: #379683;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 6.5em;
+    margin-top: 1em;
+}
+
+.logbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.logbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.logbutton:hover span {
+    padding-right: 25px;
+}
+  
+.logbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.checkpass{
+    width:2em;
+}
+
+.checkboxdiv{
+    margin-left: 6em;
+    margin-top: 1em;
+}
+
+.uname, .passcss {
+    margin-left: 10.2em;
+    width: 350px;
+   
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .modal {
+    height: 50rem;
+    background-color: #EDF5E1;
+    position: fixed;
+    top: 20vh;
+    left: 30%;
+    width: 50%;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+.container__wrapper {
+    /* Displayed at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Size */
+    height: 100px;
+    width: 100px;
+
+    /* Hide the part of its children which is displayed outside */
+    overflow: hidden;
+}
+
+.container__ribbon {
+    /* Position */
+    left: -64px;
+    position: absolute;
+    top: 32px;
+
+    /* Size */
+    height: 24px;
+    width: 206px;
+
+    /* Displayed diagonally */
+    transform: rotate(-45deg);
+
+    /* Background color */
+    background-color: #5CDb95;
+
+    /* Centerize the text content */
+    text-align: center;
+}
+
+
