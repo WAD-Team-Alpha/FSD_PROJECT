@@ -11,4 +11,5 @@ const SearchBar = () => {
     </React.Fragment>
 }
 
+
 export default SearchBar;
