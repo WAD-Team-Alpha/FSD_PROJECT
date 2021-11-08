@@ -1,0 +1,49 @@
+.nav{
+    background-color: rgba(0, 255, 234, 0.692);
+    float: left;
+    
+}
+.nav button {
+    border-radius: 0 13px 13px 0;
+}
+.search_here{
+
+    background-color: var(--light);
+    margin-left: 4em;
+    width: 50%;
+    float: left;
+    height: 2.5em;
+    margin-top: 3.2em;
+    border: 1px solid var(--blue);
+    border-radius: 13px 0 0 13px;
+    padding: 0 .5 em;
+}
+
+.submit {
+    margin-top: 2.8em;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 6.6px 10px;
+    color: aliceblue;
+
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+.item{
+    list-style-type: none;
+}
+.item li{
+    margin-top: 30px;
+    font-size: large;
+    margin-left: 15px;
+    
+}
+.item li a {
+    text-decoration: none;
+    color:black
+
+}
