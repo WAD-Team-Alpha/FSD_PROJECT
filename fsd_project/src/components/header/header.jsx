@@ -7,7 +7,7 @@ import SearchBar from "./search_bar/search_bar";
 const Header = (props) => {
   return (
     <header>
-      <div className={classes.header}>
+      <div className={`${classes.header}`}>
         <LogoTitle />
         <SearchBar />
         <AboutAccount

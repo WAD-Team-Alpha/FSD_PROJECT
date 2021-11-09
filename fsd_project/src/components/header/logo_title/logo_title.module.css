@@ -7,6 +7,7 @@
     cursor: pointer;
     border-radius: 50%;
     margin-top: 0.5em;
+    float: right;
 }
 
 .logo:hover {
@@ -14,5 +15,5 @@
 }
 
 .title {
-    color: var(--light);
+    color: var(--blue);
 }

@@ -4,7 +4,7 @@ import classes from './footer.module.css';
 const Footer = () => {
     return <footer>
         <div className={classes.footer}>
-            <div className="col-md-4 col-sm-4">
+            {/* <div className="col-md-4 col-sm-4">
                 <div className={classes.section1}>
                     <h3>Contact us</h3>
                     <ul>
@@ -33,7 +33,7 @@ const Footer = () => {
                         <li>123 559 2145</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
         </div>
     </footer>
 }
