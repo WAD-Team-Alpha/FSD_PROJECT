@@ -6,7 +6,7 @@ const Main = () => {
       
     <div >
         <div className={classes.nav}>
-
+              <Nav/>
         </div>
       
     </div>
