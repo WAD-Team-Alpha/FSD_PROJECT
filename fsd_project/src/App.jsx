@@ -4,7 +4,7 @@ import Footer from "./components/footer/footer";
 import React, { useState } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
-import Nav from "./components/nav/nav";
+
 
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
       <Header loginButtonHandler={loginButtonHandler} signin={signedin} />
       {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler}/>}
       {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler}/>}
-      <Nav />
+      
     
       <Main />
     
