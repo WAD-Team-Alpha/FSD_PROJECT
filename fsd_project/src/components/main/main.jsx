@@ -7,7 +7,7 @@ const Main = () => {
       
     <div >
         <div className={classes.nav}>
-
+              <Nav/>
         </div>
         {/* < ResultCard /> */}
     </div>

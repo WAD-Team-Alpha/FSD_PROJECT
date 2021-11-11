@@ -1,52 +1,28 @@
 .nav{
-    background-color: rgba(0, 255, 234, 0.692);
-    float: left;
-    padding-top: 0em;
-    height: 50em;
-    width: 100%;
-    
-}
-.nav button {
-    border-radius: 0 13px 13px 0;
-}
-.search_here{
+  padding-bottom: 1em;
+  border: 1px solid;
 
-    background-color: var(--light);
-    margin-left: 4em;
-    width: 50%;
-    float: left;
-    height: 2.5em;
-    margin-top: 3.2em;
-    border: 1px solid var(--blue);
-    border-radius: 13px 0 0 13px;
-    padding: 0 .5 em;
 }
-
-.submit {
-    margin-top: 2.8em;
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 6.6px 10px;
-    color: aliceblue;
-
-    text-decoration: none;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: ease-in-out;
-    transition-duration: 0.5s;
+.nav:hover{
+    box-shadow: 0px 1px rgb(97, 94, 94);
 }
 .item{
-    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 150px;
+    margin-top: 10px;
 }
-.item li{
-    margin-top: 30px;
-    font-size: large;
-    margin-left: 15px;
-    
-}
-.item li a {
-    text-decoration: none;
-    color:black
 
+.item a {
+    text-decoration: none;
+    font-size: large;
+}
+.item img {
+    height: 50px;
+    width: 50px;
+}
+
+.item a :hover {
+   color:white;
+   background-color: rgb(14, 70, 143);
 }
