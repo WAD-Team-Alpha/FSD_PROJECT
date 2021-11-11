@@ -1,6 +1,11 @@
 .footer {
-    height: 20em;
+    height: 5em;
     background-color: var(--lightgreen);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
 .section1 h3 {

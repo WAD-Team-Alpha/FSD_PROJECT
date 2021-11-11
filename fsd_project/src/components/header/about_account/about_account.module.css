@@ -1,8 +1,7 @@
 .aboutbtn {
     float: right;
     margin-top: 1em;
-    background-color: var(--blue);
-    color: white;
+    color: var(--blue);
     padding: 8px 16px;
     text-decoration: none;
     font-size: 16px;
@@ -15,7 +14,6 @@
 .signinbtn {
     float: right;
     margin-top: 1em;
-    background-color: var(--green);
     color: var(--blue);
     padding: 8px 16px;
     text-decoration: none;
@@ -27,20 +25,17 @@
 }
 
 .signinbtn:hover{
-    background-color: var(--bluegreen);
+    color: var(--green);
     transition: ease-in-out;
     transition-duration: 0.5s;
     text-decoration: none;
-    color: var(--light);
 }
 
 .aboutbtn:hover {
-    background-color: var(--bluegreen);
-    border-radius: 50%;
     transition: ease-in-out;
     transition-duration: 0.5s;
     text-decoration: none;
-    color: var(--light);
+    color: var(--green);
 }
 
 .dropdown_button {
