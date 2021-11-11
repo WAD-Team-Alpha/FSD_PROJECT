@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./main.module.css";
 import Nav from "../nav/nav";
+import ResultCard from "../results/Results";
 const Main = () => {
   return (
       
@@ -8,7 +9,7 @@ const Main = () => {
         <div className={classes.nav}>
 
         </div>
-      
+        {/* < ResultCard /> */}
     </div>
   );
 };
