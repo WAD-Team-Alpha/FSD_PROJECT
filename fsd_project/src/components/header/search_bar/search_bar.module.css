@@ -6,8 +6,8 @@
     height: 2.5em;
     margin-top: 1.2em;
     border: 1px solid var(--green);
-    border-radius: 13px 0 0 13px;
-    padding: 0 .5em;
+    /* border-radius: 13px 0 0 13px; */
+    /* padding: 0 .5em; */
 }
 
 .search_here:focus {
