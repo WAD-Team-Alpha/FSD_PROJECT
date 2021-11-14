@@ -4,12 +4,13 @@ import Nav from "../nav/nav";
 import ResultCard from "../results/Results";
 const Main = () => {
   return (
-      
-    <div >
-        <div className={classes.nav}>
-              <Nav/>
-        </div>
-        {/* < ResultCard /> */}
+    <div>
+      <div className={classes.nav}>
+        <Nav />
+      </div>
+      <div className={classes.main}>
+        <ResultCard />
+      </div>
     </div>
   );
 };

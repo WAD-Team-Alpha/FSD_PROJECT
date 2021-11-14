@@ -1,3 +1,7 @@
 .nav {
   height: 8em;
 }
+.main {
+  padding-top: 1em;
+  padding-bottom: 6em;
+}
