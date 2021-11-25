@@ -4,6 +4,7 @@ import Footer from "./components/footer/footer";
 import React, { useState } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
+import Muiheader from "./components/mui_header/Muiheader";
 
 
 
@@ -34,7 +35,8 @@ const App = () => {
 
   return (
     <div>
-      <Header loginButtonHandler={loginButtonHandler} signin={signedin} />
+      {/* <Header loginButtonHandler={loginButtonHandler} signin={signedin} /> */}
+      <Muiheader></Muiheader>
       {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler}/>}
       {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler}/>}
       
