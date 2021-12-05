@@ -1,16 +1,21 @@
 import React from 'react';
 import classes from "./nav.module.css";
 
+import WrappedApp from "./navs";
 
 const Nav = () =>{
 
     return <div className="row" className={classes.nav}>
         
         <div className="col-sm-2" className={classes.item} >
+        <a href="#">
+            <WrappedApp/>
+            </a>
+        </div>
+        <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-                 <img src="../image/computer.jpg"/>
-                 <p>Computer</p>
+            <WrappedApp/>
 
             </a>
                 
@@ -18,8 +23,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-                 <img src="../image/phone.jpg"/>
-                 <p>Mobile</p>
+            <WrappedApp/>
 
             </a>
                 
@@ -27,8 +31,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-                 <img src="../image/clothe.jpg"/>
-                 <p>Clothe</p>
+            <WrappedApp/>
 
             </a>
                 
@@ -36,8 +39,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-                 <img src="../image/TV.jpg"/>
-                 <p>Television</p>
+            <WrappedApp/>
 
             </a>
                 
@@ -45,17 +47,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-                 <img src="../image/hd.jpg"/>
-                 <p>HeadPhone</p>
-
-            </a>
-                
-        </div>
-        <div className="col-sm-2" className={classes.item} >
-            <a href="#">
-                 
-                 <img src="../image/computer.jpg"/>
-                 <p>Kitchen</p>
+            <WrappedApp/>
 
             </a>
                 

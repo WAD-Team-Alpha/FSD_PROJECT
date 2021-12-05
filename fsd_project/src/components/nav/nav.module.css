@@ -1,6 +1,7 @@
 .nav{
   padding-bottom: 1em;
   border: 1px solid;
+ 
 
 }
 .nav:hover{
@@ -8,8 +9,8 @@
 }
 .item{
     display: inline-block;
-    margin-left: 10px;
-    padding-left: 150px;
+    margin-left: 30px;
+    padding-left: 100px;
     margin-top: 10px;
 }
 
@@ -25,4 +26,6 @@
 .item a :hover {
    color:white;
    background-color: rgb(14, 70, 143);
+   border-radius: 5px;
+
 }
