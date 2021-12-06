@@ -9,7 +9,7 @@ const Main = () => {
         <Nav />
       </div>
       <div className={classes.main}>
-        <ResultCard />
+       <ResultCard /> 
       </div>
     </div>
   );
