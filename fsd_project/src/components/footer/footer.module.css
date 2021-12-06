@@ -1,14 +1,12 @@
 .footer {
     height: 5em;
-    background-color: var(--lightgreen);
-
-
+    background-color: #000125;
     position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
-
+    z-index: 1;
 }
 
 .section1 h3 {

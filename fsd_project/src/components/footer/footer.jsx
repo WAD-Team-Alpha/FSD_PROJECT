@@ -1,39 +1,70 @@
-import React from 'react';
+import { Drawer, IconButton, Typography } from '@mui/material';
+import { React, useState } from 'react';
 import classes from './footer.module.css';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { Box } from '@mui/system';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Nav from '../nav/nav'
+import FooterContent from './footer_content';
 
 const Footer = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleDrawer = () => {
+        console.log("I am executed");
+        open == false ? setOpen(true) : setOpen(false);
+    };
+
     return <footer>
+        <Drawer
+            sx={{
+                '& .MuiDrawer-paper': {
+                    zIndex: '0',
+                    marginBottom: '5em',
+                },
+            }}
+            variant="persistent"
+            anchor="bottom"
+            open={open}
+        >
+            <FooterContent />
+        </Drawer>
         <div className={classes.footer}>
-            {/* <div className="col-md-4 col-sm-4">
-                <div className={classes.section1}>
-                    <h3>Contact us</h3>
-                    <ul>
-                        <li>+91 888 53 635 888</li>
-                        <li>abcd@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="col-md-4 col-sm-4">
-                <div className={classes.section2}>
-                    <h3>Social Media</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Whatsapp</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="col-md-4 col-sm-4">
-                <div className={classes.section3}>
-                    <h3>Support</h3>
-                    <ul>
-                        <li>Need Assistance</li>
-                        <li>Contact to this number</li>
-                        <li>123 559 2145</li>
-                    </ul>
-                </div>
-            </div> */}
+            <Box sx={{ display: 'flex' }}>
+                <IconButton
+                    size="large"
+                    onClick={handleDrawer}
+                >
+                    <KeyboardArrowUpIcon sx={{
+                        fontSize: '2em',
+                        color: '#5CDB95',
+                        marginLeft: '10px',
+                        marginTop: '5px',
+                    }} />
+                </IconButton>
+                <Typography variant="h5" sx={{ mt: '3.5em', width: "100%", textAlign: "center", fontSize: ".83em", color: "#828282" }}>
+                    Copyright &copy; 2021-2022 FSD-GROUP-8. All Rights Reserved
+                </Typography>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'row-reverse',
+                        p: 1,
+                        m: 1,
+                        bgcolor: 'background.paper',
+                    }}
+                >
+                    <IconButton><InstagramIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                    <IconButton><FacebookIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                    <IconButton><YouTubeIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                    <IconButton><TwitterIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                    <IconButton><GitHubIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                </Box>
+            </Box>
         </div>
     </footer>
 }
