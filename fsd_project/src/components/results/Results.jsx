@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
 import { width } from "@mui/system";
 import PaginationOutlined from "./pagination";
+import { Divider } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -18,7 +19,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "#EDF5E1",
     width: "100%",
     padding: "20px",
   },
@@ -27,50 +27,49 @@ const useStyles = makeStyles({
     color: "#05386B",
   },
   query: {
-    padding: "1rem",
+    paddingTop: "1rem",
+    
   },
   pagination: {
-    padding:"1rem",
+    padding: "1rem",
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
     width: "40%",
   },
 });
-export default function BasicGrid() {
+export default function ResultCard() {
   const classes = useStyles();
   return (
-    <Container className={classes.root}>
-      <Paper className={classes.paper} elevation={3}>
-        <Typography className={classes.query} variant="h4" gutterBottom>
-          Search Results for "Lizard"
-        </Typography>
-      </Paper>
-
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4}>
+    <Container maxWidth="xl" className={classes.root}>
+      <Typography className={classes.query} variant="h5" gutterBottom>
+        Search Results for "Lizard"
+      </Typography>
+      <Divider />
+      <Box sx={{ flexGrow: 1, marginY:"1.5rem" }}>
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <ActionAreaCard />
           </Grid>
         </Grid>
