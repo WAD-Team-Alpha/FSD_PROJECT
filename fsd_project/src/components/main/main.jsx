@@ -5,8 +5,8 @@ import ResultCard from "../results/Results";
 const Main = () => {
   return (
     <div className={classes.main}>
-      <div>
-        {/* <ResultCard /> */}
+      <div >
+        <ResultCard />
       </div>
     </div>
   );
