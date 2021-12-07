@@ -26,6 +26,12 @@ export default function ActionAreaCard() {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={Image}
+        alt="green iguana"
+      />
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" sx={{ bgcolor: deepOrange[500] }}>
@@ -35,13 +41,8 @@ export default function ActionAreaCard() {
         title="Shrimp and Chorizo Paella"
         subheader="September 14, 2016"
       />
-      <CardMedia
-        component="img"
-        height="140"
-        image={Image}
-        alt="green iguana"
-      />
-      <CardContent>
+      
+      <CardContent sx={{paddingTop:"0px"}}>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
         </Typography>

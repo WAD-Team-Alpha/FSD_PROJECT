@@ -5,8 +5,8 @@ import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
 import Muiheader from "./components/mui_header/Muiheader";
 import Layout from "./Layout";
-
-
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ResultCard from "./components/results/Results";
 
 const App = () => {
   // const [signup, setSignup] = useState(false);
@@ -40,7 +40,7 @@ const App = () => {
         {/* {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} />}
         {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} />} */}
         <Main />
-
+        
       </Layout>
     </React.Fragment>
   );
