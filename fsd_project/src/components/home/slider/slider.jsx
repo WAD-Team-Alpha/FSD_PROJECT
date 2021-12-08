@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) =>
         display: 'flex',
         left: '50%',
         transform: 'translateX(-50%)',
-        color: 'white',
     },
   }),
 );
@@ -36,14 +35,14 @@ const MySlider = () => {
     };
 
     const Img = styled('img')(({ theme }) => ({
-        height: '14em',
+        height: '15em',
     }));
 
     return (
         <Slider {...settings}>
-            <Img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60" alt="A" />
-            <Img src="https://wallpaperaccess.com/full/981402.jpg" alt="B" />
-            <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgmQ1m-EwIY5jTU-AW5gODCbKiyoPcY89alA&usqp=CAU" alt="C" />
+            <Img src="https://htmlcolorcodes.com/assets/images/colors/neon-orange-color-solid-background-1920x1080.png" alt="A" />
+            <Img src="https://htmlcolorcodes.com/assets/images/colors/shamrock-green-color-solid-background-1920x1080.png" alt="B" />
+            <Img src="https://htmlcolorcodes.com/assets/images/colors/light-violet-color-solid-background-1920x1080.png" alt="C" />
         </Slider>
     );
 }

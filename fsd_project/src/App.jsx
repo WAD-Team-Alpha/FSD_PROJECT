@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ResultCard from "./components/results/Results";
 
 const App = () => {
-  const [signup, setSignup] = useState(true);
+  const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
   const [signedin, setSignedin] = useState(false);
   const loginButtonHandler = (state) => {

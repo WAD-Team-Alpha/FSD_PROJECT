@@ -22,7 +22,7 @@ const AccountMenu = () => {
         <React.Fragment>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                 <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
-                    <Avatar sx={{ width: '2.5em', height: '2.5em' }} />
+                    <Avatar sx={{ width: '2.2em', height: '2.2em' }} />
                 </IconButton>
             </Box>
             <Menu

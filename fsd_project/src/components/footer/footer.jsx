@@ -8,7 +8,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Nav from '../nav/nav'
 import FooterContent from './footer_content';
 
 const Footer = () => {
@@ -24,7 +23,7 @@ const Footer = () => {
             sx={{
                 '& .MuiDrawer-paper': {
                     zIndex: '0',
-                    marginBottom: '5em',
+                    marginBottom: '4em',
                 },
             }}
             variant="persistent"
@@ -43,10 +42,9 @@ const Footer = () => {
                         fontSize: '1.4em',
                         color: '#5CDB95',
                         marginLeft: '10px',
-                        marginTop: '5px',
                     }} />
                 </IconButton>
-                <Typography variant="h5" sx={{ mt: '4em', width: "100%", textAlign: "center", fontSize: ".7em", color: "#828282" }}>
+                <Typography variant="h5" sx={{ mt: '3.5em', width: "100%", textAlign: "center", fontSize: ".7em", color: "#828282" }}>
                     Copyright &copy; 2021-2022 FSD-GROUP-8. All Rights Reserved
                 </Typography>
                 <Box
@@ -54,6 +52,7 @@ const Footer = () => {
                         display: 'flex',
                         flexDirection: 'row-reverse',
                         p: 1,
+                        paddingTop: 0,
                         m: 1,
                         bgcolor: 'background.paper',
                     }}
