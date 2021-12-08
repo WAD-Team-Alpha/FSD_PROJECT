@@ -15,28 +15,29 @@ const Muiheader = (props) => {
         <Toolbar sx={{
           backgroundColor: "#05386B",
           zIndex: '5',
+          height: '4em',
         }}>
           <IconButton
-            size="large"
+            size="small"
             edge="start"
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
             onClick={props.state}
           >
-            <MenuIcon sx={{ fontSize: '1.4em', }} />
+            <MenuIcon/>
           </IconButton>
           <Avatar
             src={logo}
             variant="rounded"
             sx={{
-              width: '9em',
+              width: '6em',
             }} />
           <Searchbar />
           <Box sx={{ flexGrow: 1, }} />
           <Button variant="outlined" sx={{
             color: '#5CDB95',
-            fontSize: '1em',
+            fontSize: '0.8em',
             ":hover": {
               color: '#5CDB95',
             }

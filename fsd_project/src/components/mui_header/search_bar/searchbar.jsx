@@ -7,7 +7,7 @@ const Searchbar = () => {
     return (
         <Search fullWidth>
           <SearchIconWrapper>
-            <SearchIcon sx={{ fontSize: '1.6em', }}/>
+            <SearchIcon fontSize="small" />
           </SearchIconWrapper>
           <StyledInputBase
             placeholder="Search…"
