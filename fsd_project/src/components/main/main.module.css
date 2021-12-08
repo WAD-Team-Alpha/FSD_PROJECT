@@ -1,3 +1,9 @@
 .nav {
   height: 8em;
 }
+.main {
+  z-index: 0;
+  margin-top: 5.5em;
+  padding-top: 1em;
+  padding-bottom: 6em;
+}

@@ -1,15 +1,14 @@
 .nav{
   padding-bottom: 1em;
   border: 1px solid;
+ 
 
 }
-.nav:hover{
-    box-shadow: 0px 1px rgb(97, 94, 94);
-}
+
 .item{
     display: inline-block;
-    margin-left: 10px;
-    padding-left: 150px;
+    margin-left: 30px;
+    padding-left: 100px;
     margin-top: 10px;
 }
 
@@ -22,7 +21,3 @@
     width: 50px;
 }
 
-.item a :hover {
-   color:white;
-   background-color: rgb(14, 70, 143);
-}
