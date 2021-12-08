@@ -27,7 +27,6 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  margin-left: 6.5em;
   margin-top: 1em;
 }
 
@@ -82,12 +81,11 @@
 }
 
 .modal {
-  height: 50rem;
   background-color: #EDF5E1;
   position: fixed;
-  top: 20vh;
-  left: 30%;
-  width: 50%;
+  top: 15vh;
+  left: 10%;
+  width: 80%;
   z-index: 100;
   overflow: hidden;
 }
@@ -110,7 +108,7 @@
   /* Position */
   left: -64px;
   position: absolute;
-  top: 32px;
+  top: 20px;
 
   /* Size */
   height: 24px;
