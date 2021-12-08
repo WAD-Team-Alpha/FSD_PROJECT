@@ -1,0 +1,17 @@
+.navtabs{
+    color:red;
+}
+
+.tabLabel{
+    font-size: 12px;
+    color:#05386B;
+    
+}
+
+.tabpanel{
+    text-align: center;
+    font-size: large;
+    color: #379683;
+    font-family: 'Metropolis-Regular';
+}
+

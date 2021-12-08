@@ -1,0 +1,65 @@
+.profileleft{
+  /* position: fixed; */
+  margin-left: 14em;
+  overflow-x: hidden;
+  margin-top: 0.2em;
+  /* padding-top: 30px; */
+}
+
+
+
+
+.profileRight{
+  margin-left: 50em;
+  margin-top: 2.1em;
+}
+
+.uname{
+  margin-left: 22em;
+  margin-top: -5em;
+  /* margin-bottom: 2em; */
+}
+
+
+
+.followbutton{
+  width: 10em;
+  
+  margin-left: 30em;
+}
+
+.followers{
+  margin-left: -30.8em;
+}
+
+.following{
+  margin-left: 1em;
+  font-size: small;
+}
+.pfp{
+  font-size: 32px;
+}
+
+.unav{
+  margin-left: 16em;
+  margin-top: 2em;
+  border-bottom: 0.5px;
+}
+
+
+
+.maincontainer{
+  background-color: #EDF5E1;
+  margin-bottom: 0em;
+  height:500px;
+}
+
+.username{
+ 
+  font-family: 'Segoe UI';
+  font-size: 23px;
+}
+
+
+
+
