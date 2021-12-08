@@ -4,9 +4,7 @@
  
 
 }
-.nav:hover{
-    box-shadow: 0px 1px rgb(97, 94, 94);
-}
+
 .item{
     display: inline-block;
     margin-left: 30px;
@@ -23,9 +21,3 @@
     width: 50px;
 }
 
-.item a :hover {
-   color:white;
-   background-color: rgb(14, 70, 143);
-   border-radius: 5px;
-
-}

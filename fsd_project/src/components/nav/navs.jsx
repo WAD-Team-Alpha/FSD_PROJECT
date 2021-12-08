@@ -10,20 +10,16 @@ import { withStyles } from "@mui/styles";
 
 const styles = muiBaseTheme => ({
   card: {
-    maxWidth: 200,
-    maxHeight:120,
+    maxWidth: 80,
+    maxHeight:80,
     marginTop:20,
     margin: "auto",
-    transition: "0.3s",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
-    "&:hover": {
-      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)"
-    }
+   
   },
   media: {
     // paddingTop: "56.25%",
-    height: 80,
-    width:100,
+    height: 50,
+    width:80,
   },
   content: {
    
@@ -31,10 +27,11 @@ const styles = muiBaseTheme => ({
     
   },
  
-  heading: {
-   
-  },
  
+  dist:{
+    fontSize: 15,
+    marginTop:-10 ,
+  }
   
 });
 
@@ -49,7 +46,7 @@ function card({ classes }) {
           }
         />
         <CardContent className={classes.content}>
-        <Typography variant="h7">Moblie</Typography>
+        <Typography ><p className={classes.dist}>Moblie</p></Typography>
           
          
         </CardContent>
