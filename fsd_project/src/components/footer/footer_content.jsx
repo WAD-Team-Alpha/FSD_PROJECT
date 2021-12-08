@@ -12,7 +12,7 @@ const FooterContent = () => {
                         onClick={() => {
                             console.info("I'm a button.");
                         }}
-                        sx={{ margin: "2em", color: "#a9abaa" }}
+                        sx={{ margin: "1.7em", color: "#a9abaa" }}
                         underline="none"
                     >
                         Terms of Service
@@ -24,7 +24,7 @@ const FooterContent = () => {
                         onClick={() => {
                             console.info("I'm a button.");
                         }}
-                        sx={{ margin: "2em", color: "#a9abaa" }}
+                        sx={{ margin: "1.7em", color: "#a9abaa" }}
                         underline="none"
                     >
                         Privacy
@@ -36,7 +36,7 @@ const FooterContent = () => {
                         onClick={() => {
                             console.info("I'm a button.");
                         }}
-                        sx={{ margin: "2em", color: "#a9abaa" }}
+                        sx={{ margin: "1.7em", color: "#a9abaa" }}
                         underline="none"
                     >
                         Content Policy
@@ -48,14 +48,14 @@ const FooterContent = () => {
                         onClick={() => {
                             console.info("I'm a button.");
                         }}
-                        sx={{ margin: "2em", color: "#a9abaa" }}
+                        sx={{ margin: "1.7em", color: "#a9abaa" }}
                         underline="none"
                     >
                         Help Center
                     </Link>
                 </Box>
                 <Button variant="contained"
-                    sx={{ height: '2em', fontSize: '1em', mt: '1.6em', backgroundColor: '#5CDB95', color: '#05386B', fontWeight: '800', mr: '2em' }}>
+                    sx={{ height: '2em', fontSize: '1em', mt: '1.4em', backgroundColor: '#5CDB95', color: '#05386B', fontWeight: '800', mr: '2em' }}>
                     Support Us
                 </Button>
             </Box>

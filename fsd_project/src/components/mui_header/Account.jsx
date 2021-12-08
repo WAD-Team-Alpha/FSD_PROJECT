@@ -22,7 +22,7 @@ const AccountMenu = () => {
         <React.Fragment>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                 <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
-                    <Avatar sx={{ width: '3.5em', height: '3.5em' }} />
+                    <Avatar sx={{ width: '2.5em', height: '2.5em' }} />
                 </IconButton>
             </Box>
             <Menu
@@ -37,8 +37,8 @@ const AccountMenu = () => {
                         filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
                         mt: 1.5,
                         '& .MuiAvatar-root': {
-                            width: 32,
-                            height: 32,
+                            width: 28,
+                            height: 28,
                             ml: -0.5,
                             mr: 1,
                         },
@@ -47,7 +47,7 @@ const AccountMenu = () => {
                             display: 'block',
                             position: 'absolute',
                             top: 0,
-                            right: 14,
+                            right: 25,
                             width: 10,
                             height: 10,
                             bgcolor: 'background.paper',
@@ -59,19 +59,19 @@ const AccountMenu = () => {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem sx={{fontSize: "1em"}}>
+                <MenuItem sx={{fontSize: "0.9em"}}>
                     <Avatar /> Profile
                 </MenuItem>
                 <Divider />
-                <MenuItem sx={{fontSize: "1em"}}>
+                <MenuItem sx={{fontSize: "0.9em"}}>
                     <ListItemIcon>
-                        <Settings fontSize="large" />
+                        <Settings fontSize="medium" />
                     </ListItemIcon>
                     Settings
                 </MenuItem>
-                <MenuItem sx={{fontSize: "1em"}}>
+                <MenuItem sx={{fontSize: "0.9em"}}>
                     <ListItemIcon>
-                        <Logout fontSize="large" />
+                        <Logout fontSize="medium" />
                     </ListItemIcon>
                     Logout
                 </MenuItem>

@@ -39,7 +39,7 @@ const App = () => {
         {/* Routing should be implemented here only */}
         {/* {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} />}
         {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} />} */}
-        {/* <Main /> */}
+        <Main />
 
       </Layout>
     </React.Fragment>

@@ -40,13 +40,13 @@ const Footer = () => {
                     onClick={handleDrawer}
                 >
                     <KeyboardArrowUpIcon sx={{
-                        fontSize: '2em',
+                        fontSize: '1.4em',
                         color: '#5CDB95',
                         marginLeft: '10px',
                         marginTop: '5px',
                     }} />
                 </IconButton>
-                <Typography variant="h5" sx={{ mt: '3.5em', width: "100%", textAlign: "center", fontSize: ".83em", color: "#828282" }}>
+                <Typography variant="h5" sx={{ mt: '4em', width: "100%", textAlign: "center", fontSize: ".7em", color: "#828282" }}>
                     Copyright &copy; 2021-2022 FSD-GROUP-8. All Rights Reserved
                 </Typography>
                 <Box
@@ -58,11 +58,11 @@ const Footer = () => {
                         bgcolor: 'background.paper',
                     }}
                 >
-                    <IconButton><InstagramIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
-                    <IconButton><FacebookIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
-                    <IconButton><YouTubeIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
-                    <IconButton><TwitterIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
-                    <IconButton><GitHubIcon sx={{ color: 'white', fontSize: '1.5em' }} /></IconButton>
+                    <IconButton><InstagramIcon sx={{ color: 'white', fontSize: '1em' }} /></IconButton>
+                    <IconButton><FacebookIcon sx={{ color: 'white', fontSize: '1em' }} /></IconButton>
+                    <IconButton><YouTubeIcon sx={{ color: 'white', fontSize: '1em' }} /></IconButton>
+                    <IconButton><TwitterIcon sx={{ color: 'white', fontSize: '1em' }} /></IconButton>
+                    <IconButton><GitHubIcon sx={{ color: 'white', fontSize: '1em' }} /></IconButton>
                 </Box>
             </Box>
         </div>
