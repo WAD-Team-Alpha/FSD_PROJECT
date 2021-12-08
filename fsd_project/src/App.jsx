@@ -4,6 +4,7 @@ import Footer from "./components/footer/footer";
 import React, { useState } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
+import Profile from "./components/profile/Profile";
 
 
 
@@ -40,7 +41,7 @@ const App = () => {
       
     
       <Main />
-    
+      <Profile/>
       <Footer />
     </div>
   );
