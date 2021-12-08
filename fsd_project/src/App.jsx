@@ -9,36 +9,40 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ResultCard from "./components/results/Results";
 
 const App = () => {
-  // const [signup, setSignup] = useState(false);
-  // const [signin, setSignin] = useState(false);
-  // const [signedin, setSignedin] = useState(false);
-  // const loginButtonHandler = (state) => {
-  //   setSignin(state);
-  //   console.log("login handler");
-  // };
-  // const signinHandler = () => {
-  //   setSignup(false);
-  //   setSignin(true)
-  //   // console.log("login handler");
-  // };
-  // const signupHandler = () => {
-  //   setSignup(true);
-  //   setSignin(false)
-  //   // console.log("login handler");
-  // };
-  // const loginHandler = () => {
-  //   setSignup(false);
-  //   setSignin(false);
-  //   setSignedin(true);
-  //   // console.log("login handler");
-  // };
+  const [signup, setSignup] = useState(true);
+  const [signin, setSignin] = useState(false);
+  const [signedin, setSignedin] = useState(false);
+  const loginButtonHandler = (state) => {
+    setSignin(state);
+    console.log("login handler");
+  };
+  const signinHandler = () => {
+    setSignup(false);
+    setSignin(true)
+    // console.log("login handler");
+  };
+  const signupHandler = () => {
+    setSignup(true);
+    setSignin(false)
+    // console.log("login handler");
+  };
+  const loginHandler = () => {
+    setSignup(false);
+    setSignin(false);
+    setSignedin(true);
+    // console.log("login handler");
+  };
+  const closeHandler = () => {
+    setSignup(false);
+    setSignin(false);
+  };
 
   return (
     <React.Fragment>
       <Layout>
         {/* Routing should be implemented here only */}
-        {/* {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} />}
-        {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} />} */}
+        {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
+        {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
         <Main />
         
       </Layout>
