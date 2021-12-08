@@ -4,6 +4,7 @@ import Nav from "../nav/nav";
 import ResultCard from "../results/Results";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from '../home/home'
+import Profile from "../profile/Profile";
 const Main = () => {
   return (
     <div className={classes.main}>
@@ -12,6 +13,7 @@ const Main = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<ResultCard />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Router>
       </div>
