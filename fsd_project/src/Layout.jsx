@@ -4,7 +4,8 @@ import Muiheader from './components/mui_header/Muiheader'
 import Drawer from '@mui/material/Drawer';
 import Nav from './components/nav/nav';
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+
     const [open, setOpen] = React.useState(false);
 
     const handleDrawer = () => {
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
     
     return (
         <React.Fragment>
-            <Muiheader state={handleDrawer} />
+            <Muiheader state={handleDrawer} signinHandler={props.signinHandler}/>
             <Drawer
                 sx={{
                     '& .MuiDrawer-paper': {
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
                 <Nav></Nav>
             </Drawer>
             <div>
-                {children}
+                {props.children}
             </div>
             <Footer />
         </React.Fragment>
