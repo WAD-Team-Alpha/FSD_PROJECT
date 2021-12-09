@@ -8,7 +8,7 @@ import Layout from "./Layout";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ResultCard from "./components/results/Results";
 import { useDispatch } from 'react-redux';
-import { authActions } from '../store/auth';
+import { authActions } from './components/store/auth';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const App = () => {
       {/* Routing should be implemented here only */}
       {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
       {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
-      <Main />
+      <Main signinHandler={signinHandler}/>
     </React.Fragment>
   );
 };

@@ -8,9 +8,11 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import AccountMenu from "./Account";
 import { useSelector } from "react-redux";
-import { authActions } from "../store/auth";
 
 const Muiheader = (props) => {
+  const signinButtonHandler= () => {
+      props.signinHandler();
+  }
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
   return (
     <>
@@ -44,6 +46,7 @@ const Muiheader = (props) => {
           {!isAuth && (
             <Button
               variant="outlined"
+              onClick={signinButtonHandler}
               sx={{
                 color: "#5CDB95",
                 fontSize: "0.8em",

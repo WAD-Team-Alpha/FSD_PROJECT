@@ -6,12 +6,12 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from '../home/home'
 import Profile from "../profile/Profile";
 import Layout from '../../Layout'
-const Main = () => {
+const Main = (props) => {
   return (
     <div className={classes.main}>
       <div >
         <Router>
-          <Layout>
+          <Layout signinHandler={props.signinHandler}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/results" element={<ResultCard />} />
