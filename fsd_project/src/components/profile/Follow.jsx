@@ -19,16 +19,15 @@ const Follow=(props) => {
 
 
   return (
-      <div>
+      <div >
           <div className={classes.followers}>
-            <span className={classes.following}>{counter} FOLLOWERS</span>
-            <span className={classes.following}>20 FOLLOWING</span>
+            <span className={classes.following}><b>{counter}</b> followers</span>
+            <span className={classes.following}><b>20</b> following</span>
           </div>
-        <Stack direction="row" spacing={2}>
-        <Button variant="contained" onClick={incrementCounter}>FOLLOW</Button>
-        <Button variant="outlined"  onClick={decrementCounter} >UNFOLLOW</Button>
-        
-        </Stack>
+          <div className={classes.follow_buttons}>
+            <button className={classes.followbutton} onClick={incrementCounter}>Follow</button>
+            <button className={classes.unfollowbutton} onClick={decrementCounter}>Unfollow</button>
+          </div>
     </div>
   );
 }
