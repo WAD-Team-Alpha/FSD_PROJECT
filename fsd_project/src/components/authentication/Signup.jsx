@@ -15,11 +15,7 @@ const useStyles = makeStyles({
   },
 });
 const Signup = (props) => {
-  const [passwordShown, setPasswordShown] = useState(false);
   const classesUi = useStyles();
-  const showPass = () => {
-    setPasswordShown(passwordShown ? false : true);
-  };
 
   return (
     <div>
@@ -35,12 +31,10 @@ const Signup = (props) => {
           <Container maxWidth="xl" className={classesUi.body}>
             <SignupInput />
             <br />
-          <button type="submit" className={classes.logbutton} onClick="#">
-            <span>Sign up</span>
-          </button>
+            <button type="submit" className={classes.logbutton} onClick="#">
+              <span>Sign up</span>
+            </button>
           </Container>
-
-          
         </form>
 
         <h4 style={{ textAlign: "center", marginTop: "1em", fontSize: "15px" }}>
