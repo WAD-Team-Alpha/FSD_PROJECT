@@ -38,13 +38,10 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Layout>
-        {/* Routing should be implemented here only */}
-        {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
-        {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
-        <Main />
-        
-      </Layout>
+      {/* Routing should be implemented here only */}
+      {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
+      {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
+      <Main />
     </React.Fragment>
   );
 };
