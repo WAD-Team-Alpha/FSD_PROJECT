@@ -1,0 +1,33 @@
+
+
+.date {
+    font-size: 11px
+}
+
+.commenttext {
+    font-size: 12px
+}
+
+.fs-12 {
+    font-size: 12px
+}
+
+.shadownone {
+    box-shadow: none
+}
+
+.name {
+    color: #007bff
+}
+
+.cursor:hover {
+    color: rgb(23, 23, 119)
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.textarea {
+    resize: none
+}

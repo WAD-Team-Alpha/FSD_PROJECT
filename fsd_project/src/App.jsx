@@ -5,7 +5,7 @@ import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./components/store/auth";
 import { sendAuthData, fetchAuthData } from "./components/store/auth-actions";
-
+import Details from "./components/detail/dit";
 const App = () => {
   const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-      {/* Routing should be implemented here only */}
+      Routing should be implemented here only
       {signup && (
         <Signup
           signinHandler={signinHandler}
@@ -62,6 +62,8 @@ const App = () => {
         />
       )}
       <Main signinHandler={signinHandler} />
+     
+     
     </React.Fragment>
   );
 };
