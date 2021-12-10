@@ -5,7 +5,7 @@ import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./components/store/auth";
 import { sendAuthData, fetchAuthData } from "./components/store/auth-actions";
-import Details from "./components/detail/dit";
+
 const App = () => {
   const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
