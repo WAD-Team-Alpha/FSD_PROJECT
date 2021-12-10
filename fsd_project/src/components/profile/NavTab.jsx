@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import classes from './navbar.module.css';
 import About from './About';
+import Posts from './posts/posts';
 
 
 
@@ -58,7 +59,7 @@ export default function BasicTabs() {
         <span class={classes.tabpanel}>QUESTIONS</span>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <span class={classes.tabpanel}>POSTS</span>
+        <span class={classes.tabpanel}><Posts/></span>
       </TabPanel>
       <TabPanel value={value} index={3}>
         <span class={classes.tabpanel}>FOLLOWERS</span>
