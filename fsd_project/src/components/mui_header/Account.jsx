@@ -8,8 +8,11 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import { useDispatch} from "react-redux";
+import { authActions } from '../store/auth';
 
 const AccountMenu = () => {
+    const dispatch = useDispatch();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -18,6 +21,9 @@ const AccountMenu = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
+    const logoutHandler = () => {
+        dispatch(authActions.logout());
+    }
     return (
         <React.Fragment>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -69,8 +75,8 @@ const AccountMenu = () => {
                     </ListItemIcon>
                     Settings
                 </MenuItem>
-                <MenuItem sx={{fontSize: "0.9em"}}>
-                    <ListItemIcon>
+                <MenuItem onClick={logoutHandler} sx={{fontSize: "0.9em"}}>
+                    <ListItemIcon >
                         <Logout fontSize="medium" />
                     </ListItemIcon>
                     Logout
