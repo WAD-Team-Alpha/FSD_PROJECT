@@ -58,7 +58,7 @@ const Muiheader = (props) => {
               Signin
             </Button>
           )}
-          <AccountMenu />
+          {isAuth && <AccountMenu />}
         </Toolbar>
       </AppBar>
     </>
