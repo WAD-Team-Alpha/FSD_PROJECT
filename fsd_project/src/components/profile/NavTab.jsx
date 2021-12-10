@@ -1,10 +1,10 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import classes from './navbar.module.css';
+import About from './About';
 
 
 
@@ -40,7 +40,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '45%' }}>
       <Box sx={{ borderBottom: 1, borderColor: '#5CDB95' }}>
         <Tabs value={value} onChange={handleChange}    >
         <Tab label={<span className={classes.tabLabel} >About </span>}/>
@@ -52,7 +52,7 @@ export default function BasicTabs() {
         
       </Box>
       <TabPanel   value={value} index={0}>
-        <span class={classes.tabpanel}>ABOUT</span>
+        <span class={classes.tabpanel}><About/></span>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <span class={classes.tabpanel}>QUESTIONS</span>

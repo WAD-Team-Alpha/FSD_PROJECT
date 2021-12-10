@@ -7,15 +7,14 @@ import Muiheader from "./components/mui_header/Muiheader";
 import Layout from "./Layout";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ResultCard from "./components/results/Results";
+import { useDispatch } from 'react-redux';
+import { authActions } from './components/store/auth';
 
 const App = () => {
+  const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
-  const [signedin, setSignedin] = useState(false);
-  const loginButtonHandler = (state) => {
-    setSignin(state);
-    console.log("login handler");
-  };
+  
   const signinHandler = () => {
     setSignup(false);
     setSignin(true)
@@ -29,7 +28,7 @@ const App = () => {
   const loginHandler = () => {
     setSignup(false);
     setSignin(false);
-    setSignedin(true);
+    dispatch(authActions.login());
     // console.log("login handler");
   };
   const closeHandler = () => {
@@ -39,13 +38,10 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Layout>
-        {/* Routing should be implemented here only */}
-        {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
-        {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler}/>}
-        <Main />
-        
-      </Layout>
+      {/* Routing should be implemented here only */}
+      {signup && <Signup signinHandler={signinHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
+      {signin && <Signin signupHandler={signupHandler} loginHandler={loginHandler} closeHandler={closeHandler} />}
+      <Main signinHandler={signinHandler}/>
     </React.Fragment>
   );
 };
