@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-      Routing should be implemented here only
+      {/* Routing should be implemented here only */}
       {signup && (
         <Signup
           signinHandler={signinHandler}
@@ -62,8 +62,6 @@ const App = () => {
         />
       )}
       <Main signinHandler={signinHandler} />
-     
-     
     </React.Fragment>
   );
 };
