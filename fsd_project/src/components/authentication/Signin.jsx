@@ -2,63 +2,46 @@ import React from "react";
 import classes from "./Signin.module.css";
 import { useState } from "react";
 import Signup from "./Signup";
+import { Container } from "@mui/material";
+import SigninInput from "./SigninInput";
+import { makeStyles } from "@mui/styles";
+
+
+const useStyles = makeStyles({
+  body: {
+    padding: "1rem",
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    width: "60%",
+    paddingBottom: "2em",
+  },
+});
 
 const Signin = (props) => {
-  const [passwordShown, setPasswordShown] = useState(false);
-
-  const showPass = () => {
-    setPasswordShown(passwordShown ? false : true);
-  };
+  const classesDesign = useStyles();
+  
 
   return (
     <div>
-      <div className={classes.backdrop} />
+      <div className={classes.backdrop} onClick={props.closeHandler}/>
       <div className={classes.modal}>
         <div className={classes.container}>
           <div className={classes.container__wrapper}>
             <div className={classes.container__ribbon}></div>
           </div>
         </div>
-        <h1 style={{ textAlign: "center", marginBottom: "2em" }}>
+        <h1 style={{ textAlign: "center", marginTop: "0.5em" }}>
           Signin to your Account
         </h1>
         <form onSubmit={props.loginHandler}>
-          <label htmlFor="username" className={classes.loglabel}>
-            Username
-          </label>
-          <input
-            type="text"
-            required
-            id="username"
-            className={classes.uname}
-            placeholder="Enter your username"
-          />
-          <br />
-          <label htmlFor="pass" className={classes.loglabel}>
-            Password
-          </label>
-          <input
-            type={passwordShown ? "text" : "password"}
-            required
-            id="pass"
-            className={classes.passcss}
-            placeholder="Enter your password"
-          />
-          <br />
-
-          <div className={classes.checkboxdiv}>
-            <input
-              type="checkbox"
-              id="inpass"
-              onClick={showPass}
-              className={classes.checkpass}
-            />
-            Show Password
-          </div>
-          <br />
-          <button type="submit" className={classes.logbutton} onClick="#">
-            <span>Sign in</span>
-          </button>
+          <Container maxWidth="xl" className={classesDesign.body}>
+            <SigninInput/>
+            <br />
+            <button type="submit" className={classes.logbutton} onClick="#">
+              <span>Sign in</span>
+            </button>
+          </Container>
         </form>
 
         <h4 style={{ textAlign: "center", marginTop: "1em", fontSize: "15px" }}>

@@ -47,11 +47,11 @@ function Posts() {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        '& > :not(style)': { m: 1 },
+                        // '& > :not(style)': { m: 1 },
                     }}
                     >
 
-                    <Grid container spacing={2}>
+                    <Grid container>
                         
                          
                     <Grid item xs={12} sm={12} md={12}>
