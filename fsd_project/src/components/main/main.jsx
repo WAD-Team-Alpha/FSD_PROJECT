@@ -18,7 +18,7 @@ const Main = (props) => {
               <Route path="/" element={<Home />} />
               <Route path="/results" element={<ResultCard />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/Descrption" element={<Descrption />} />
+              <Route path="/description" element={<Descrption />} />
 
             </Routes>
           </Layout>
