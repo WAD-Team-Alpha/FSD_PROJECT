@@ -33,7 +33,7 @@ const changeValHandler=()=>{
               size="small"
               required
               disabled
-              value="hi"
+              value={props.userInfo.firstName}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
@@ -42,7 +42,7 @@ const changeValHandler=()=>{
               id="profile_lastName"
               label="Last Name"
               size="small"
-              value="lol"
+              value={props.userInfo.lastName}
               required
               disabled
             />
@@ -56,7 +56,7 @@ const changeValHandler=()=>{
               label="Email"
               size="small"
               required
-              value="aedad@gmail"
+              value={props.userInfo.email}
               disabled
               InputProps={{
                 startAdornment: (
@@ -73,6 +73,7 @@ const changeValHandler=()=>{
               id="progile_unv"
               label="University"
               size="small"
+              value={props.userInfo.university}
               required
               disabled
               //    value="idk"
@@ -83,6 +84,7 @@ const changeValHandler=()=>{
               fullWidth
               id="profile_degree"
               label="Type of Degree"
+              value={props.userInfo.degree}
               size="small"
               required
               disabled
@@ -94,6 +96,7 @@ const changeValHandler=()=>{
               id="profile_year"
               label="Graduation year"
               size="small"
+              value={props.userInfo.graduationYear}
               required
               disabled
             />
@@ -104,6 +107,7 @@ const changeValHandler=()=>{
               id="place"
               label="Location"
               size="small"
+              value={props.userInfo.location}
               required
               disabled
             />

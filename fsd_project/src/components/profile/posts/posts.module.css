@@ -1,0 +1,34 @@
+.wrapper {
+    left: 0;
+    justify-content: left;
+    align-content: flex-start;
+    float: left;
+}
+
+.wrapperfieldset {
+    margin: 00px 0;
+}
+
+.upload {
+    /* margin-left: 1em; */
+    margin-bottom: 1em;
+}
+
+.post_button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.heading {
+    left: 0;
+    justify-content: left;
+    align-content: flex-start;
+    float: left;
+}
