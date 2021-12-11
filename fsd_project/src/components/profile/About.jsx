@@ -14,32 +14,17 @@ const About = () => {
     degree : "",
     graduationYear : "",
     location : "",
+    bio : "",
   }
   const [inp, Setinp] = useState(true);
-  const [val, Setval] = useState(null);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [university, setUniversity] = useState("");
-  const [degree, setDegree] = useState("");
-  const [graduationYear, setGraduationYear] = useState("");
-  const [location, setLocation] = useState("");
   const [userInfo, setuserinfo] = useState(initialUserInfo);
   const changeVal = (props) => {
-    Setval("val");
     Setinp(false);
     
   };
 
-  const editHandler=(firstName, lastName, email, university, degree, graduationYear, location)=>{
-    // setFirstName(firstName);
-    // setLastName(lastName);
-    // setEmail(email)
-    // setUniversity(university)
-    // setDegree(degree)
-    // setGraduationYear(graduationYear)
-    // setLocation(location)
-    console.log(firstName, lastName, email, university, degree, graduationYear, location);
+  const editHandler=(firstName, lastName, email, university, degree, graduationYear, location, bio)=>{
+    console.log(firstName, lastName, email, university, degree, graduationYear, location,bio);
     setuserinfo((prevState) => ({
       firstName : firstName,
       lastName : lastName,
@@ -48,6 +33,7 @@ const About = () => {
       degree : degree,
       graduationYear : graduationYear,
       location : location,
+      bio : bio
     }));
     Setinp(true);
   }

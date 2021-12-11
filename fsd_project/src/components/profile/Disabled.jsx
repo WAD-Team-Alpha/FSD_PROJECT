@@ -121,8 +121,8 @@ const changeValHandler=()=>{
           label="Bio"
           multiline
           maxRows={8}
-          // value={value}
-          // onChange={handleChange}
+          value={props.userInfo.bio}
+          disabled
         />
         </Grid>
         <div className={classes.form_update}>

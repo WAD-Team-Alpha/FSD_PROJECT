@@ -9,6 +9,7 @@ import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import React, { useState } from "react";
+import { BiotechTwoTone } from "@mui/icons-material";
 
 const Enabled = (props) => {
   const [inp, Setinp] = useState(true);
@@ -20,13 +21,14 @@ const Enabled = (props) => {
   const [degree, setDegree] = useState(props.userInfo.degree);
   const [graduationYear, setGraduationYear] = useState(props.userInfo.graduationYear);
   const [location, setLocation] = useState(props.userInfo.location);
+  const [bio, setBio] = useState(props.userInfo.bio);
   // const [graduationYear, setGraduationYear] = useState("");
   
   const onSubmitHandler = (event) => {
     // event.preventDefault();
     console.log("this is running");
     console.log(firstName);
-    props.editHandler(firstName,lastName,email,university,degree,graduationYear,location);
+    props.editHandler(firstName,lastName,email,university,degree,graduationYear,location,bio);
     props.changeVal();
     event.preventDefault();
   };
@@ -140,9 +142,9 @@ const Enabled = (props) => {
           id="profile_bio"
           label="Bio"
           multiline
+          defaultValue={props.userInfo.bio}
+          onChange={(e)=>{setBio(e.target.value)}}
           maxRows={8}
-          // value={value}
-          // onChange={handleChange}
         />
         </Grid>
         <div className={classes.form_update}>
