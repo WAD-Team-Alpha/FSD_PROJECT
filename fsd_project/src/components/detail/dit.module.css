@@ -1,0 +1,13 @@
+
+
+.item{
+    
+    background-color: rgb(35, 44, 80);
+   width: 40%;
+    height: 800px;
+    overflow: auto;
+}
+.hadding{
+    margin-top: 100px;
+    margin-bottom:30px;
+}
