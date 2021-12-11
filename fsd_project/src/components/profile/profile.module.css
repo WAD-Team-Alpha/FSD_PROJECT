@@ -96,6 +96,12 @@ padding-left: 2px;
   background-color: #379683;
 }
 
+.form_update{
+  margin-top: 1em;
+}
+
+
+
 .edit_button{
   margin-right:30em;
   padding-left: 20px;
@@ -141,3 +147,29 @@ padding-left: 2px;
   background-color:white;
   /* border: 2px black; */
 }
+
+.followersButton :hover{
+  background-color: #5CDB95;
+}
+
+.followersFollowButton{
+  margin-left:27em;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 2em;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  /* color: black; */
+  background-color: white;
+  margin-top: 0.3em;
+}
+
+.followersuname{
+  margin-top: 5em;
+}
+
+.followersButton{
+  position: absolute;
+}
+

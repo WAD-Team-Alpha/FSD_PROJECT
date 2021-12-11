@@ -114,58 +114,16 @@ const changeValHandler=()=>{
           </Grid>
         </Grid>
         <br />
-        <span className={classes.profileaboutspan}>Employment Credentials</span>
-        <br />
-        <br />
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={12} md={6}>
-            <TextField
-              fullWidth
-              id="profile_position"
-              label="Position"
-              size="small"
-              disabled
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <TextField
-              fullWidth
-              id="profile_company"
-              label="Company name"
-              size="small"
-              disabled
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <TextField
-              fullWidth
-              id="profile_company_startyear"
-              label="Start year"
-              size="small"
-              disabled
-            />
-          </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <TextField
-              fullWidth
-              id="profile_company_endyear"
-              label="End year"
-              size="small"
-              disabled
-              value="2010"
-            />
-          </Grid>
-          <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-            <FormGroup>
-              <FormControlLabel
-                className={classes.about_checkbox}
-                control={
-                  <Checkbox name="checkbox" id="aboutcb" disabled={inp} />
-                }
-                label="I currently work here"
-              />
-            </FormGroup>
-          </FormControl>
+        <Grid item xs={12} sm={12} md={12}>
+        <TextField
+          fullWidth
+          id="profile_bio"
+          label="Bio"
+          multiline
+          maxRows={8}
+          // value={value}
+          // onChange={handleChange}
+        />
         </Grid>
         <div className={classes.form_update}>
           {/* <button className={classes.update_button} onClick={changeValHandler}>
