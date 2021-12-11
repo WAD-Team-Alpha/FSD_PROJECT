@@ -1,20 +1,17 @@
-//import { TextField } from '@mui/material';
-//import React, { useState } from 'react';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-//import './posts.module.css';
 import { useState } from 'react'
-//import { grid } from '@mui/system';
-//import { TextField } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import Stack from '@mui/material/Stack';
 import { ClassNames } from '@emotion/react';
 import classes from "./posts.module.css";
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 
 function Posts() {
 
@@ -103,9 +100,20 @@ function Posts() {
                 </Box>
                     
                 </fieldset>
-                <div classname={classes.post_button}>
-                <button type="submit">Post...</button>
-                </div>
+                {/* <div classname={classes.post_button}>
+                <button type="submit">Submit</button>
+                
+                <button type="cancel">Cancel</button>
+                </div> */}
+
+                <Stack direction="row" spacing={2}>
+                    <Button variant="outlined" startIcon={<DeleteIcon />}>
+                        Delete
+                    </Button>
+                    <Button variant="contained" endIcon={<SendIcon />}>
+                        Post
+                    </Button>
+                </Stack>
             </form>
         </div>
     )
