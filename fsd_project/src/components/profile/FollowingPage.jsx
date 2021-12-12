@@ -6,8 +6,8 @@ import classes from "./profile.module.css";
 import { width } from "@mui/system";
 import { Link } from "@mui/material";
 
-const FollowersPage = () => {
-  const names = ["alex", "brian", "syd", "john"];
+const FollowingPage = () => {
+  const names = ["peter", "elon", "joseph", "steve"];
   return (
     <div className={classes.MM}>
       {names.map((follower) => (
@@ -33,4 +33,4 @@ const FollowersPage = () => {
  
 };
 
-export default FollowersPage;
+export default FollowingPage;
