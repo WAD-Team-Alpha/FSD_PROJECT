@@ -1,15 +1,14 @@
-
 import { authActions } from "./auth";
 
 export const fetchAuthData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json'
+        "https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json"
       );
 
       if (!response.ok) {
-        throw new Error('Could not fetch data!');
+        throw new Error("Could not fetch data!");
       }
 
       const data = await response.json();
@@ -21,7 +20,7 @@ export const fetchAuthData = () => {
       const authData = await fetchData();
       dispatch(authActions.login(authData.isAuthenticated));
     } catch (error) {
-       console.log("error");
+      console.log("error");
     }
   };
 };
@@ -31,11 +30,11 @@ export const sendAuthData = (isAuth) => {
     console.log("sending");
 
     const sendRequest = async () => {
-        console.log(isAuth);
+      console.log(isAuth);
       const response = await fetch(
-        'https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json',
+        "https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json",
         {
-          method: 'PUT',
+          method: "PUT",
           body: JSON.stringify({
             isAuthenticated: isAuth,
           }),
@@ -43,7 +42,7 @@ export const sendAuthData = (isAuth) => {
       );
 
       if (!response.ok) {
-        throw new Error('Sending data failed.');
+        throw new Error("Sending data failed.");
       }
     };
 
@@ -52,7 +51,7 @@ export const sendAuthData = (isAuth) => {
 
       console.log("Success");
     } catch (error) {
-        console.log("error");
+      console.log("error");
     }
   };
 };
