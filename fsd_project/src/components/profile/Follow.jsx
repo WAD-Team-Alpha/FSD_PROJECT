@@ -10,7 +10,11 @@ import { useState } from 'react';
 
 const Follow=(props) => {
     const [counter, setCounter] = useState(1);
-    const incrementCounter = () => setCounter(counter + 1);
+   
+    const incrementCounter = () => {
+      setCounter(counter + 1);
+    
+    };
     
     let decrementCounter = () => setCounter(counter - 1);
     if(counter<=0) {
