@@ -24,7 +24,7 @@ function Comment(classes) {
     <div className="d-flex justify-content-center row mt-5">
         <div className="col-md-12">
         <div className="bg-light p-2">
-                    <div className="d-flex flex-row align-items-start"><img className="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40"/><textarea class="form-control ml-1 shadow-none textarea"></textarea></div>
+                    <div className="d-flex flex-row align-items-start"><img className="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40"/><textarea className="form-control ml-1 shadow-none textarea"></textarea></div>
                     <div className="mt-2 text-right"><button className="btn btn-primary btn-sm shadow-none " className={classes.btn} type="button">Post comment</button></div>
                 </div>
 

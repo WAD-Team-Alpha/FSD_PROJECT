@@ -1,26 +1,15 @@
-import classes from "./profile.module.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import EmailIcon from "@mui/icons-material/Email";
 import Grid from "@mui/material/Grid";
-import Checkbox from "@mui/material/Checkbox";
-import FormControl from "@mui/material/FormControl";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import React, { useState } from "react";
+import React from "react";
 
 const Disabled = (props) => {
-  const [inp, Setinp] = useState(true);
-  const [val, Setval] = useState(null);
-
-const onSubmitHandler=()=>{
+  const onSubmitHandler = () => {
     props.formHandler();
-}
+  };
 
-const changeValHandler=()=>{
-    props.changeVal();
-}
   return (
     <form onSubmit={onSubmitHandler}>
       <Box sx={{ flexGrow: 1, marginY: "1.5rem" }}>
@@ -115,21 +104,16 @@ const changeValHandler=()=>{
         </Grid>
         <br />
         <Grid item xs={12} sm={12} md={12}>
-        <TextField
-          fullWidth
-          id="profile_bio"
-          label="Bio"
-          multiline
-          maxRows={8}
-          value={props.userInfo.bio}
-          disabled
-        />
+          <TextField
+            fullWidth
+            id="profile_bio"
+            label="Bio"
+            multiline
+            maxRows={8}
+            value={props.userInfo.bio}
+            disabled
+          />
         </Grid>
-        <div className={classes.form_update}>
-          {/* <button className={classes.update_button} onClick={changeValHandler}>
-            Update
-          </button> */}
-        </div>
       </Box>
     </form>
   );

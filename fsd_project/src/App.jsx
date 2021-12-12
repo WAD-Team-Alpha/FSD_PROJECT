@@ -3,18 +3,18 @@ import React, { useState, useEffect } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
-import { authActions } from "./components/store/auth";
-import { sendAuthData, fetchAuthData } from "./components/store/auth-actions";
+import { authActions } from "./store/auth";
+import { sendAuthData, fetchAuthData } from "./store/auth-actions";
 
 const App = () => {
   const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
-  var isStart = true;
+  // var isStart = true;
   useEffect(() => {
     dispatch(fetchAuthData());
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     // if (isStart) {
     //   isStart = false;
