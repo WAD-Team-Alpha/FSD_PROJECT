@@ -55,19 +55,19 @@ export default function BasicTabs() {
         
       </Box>
       <TabPanel   value={value} index={0}>
-        <span class={classes.tabpanel}><About/></span>
+        <span className={classes.tabpanel}><About/></span>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <span class={classes.tabpanel}>QUESTIONS</span>
+        <span className={classes.tabpanel}>QUESTIONS</span>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <span class={classes.tabpanel}><Posts/></span>
+        <span className={classes.tabpanel}><Posts/></span>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <span class={classes.tabpanel}><FollowersPage/></span>
+        <span className={classes.tabpanel}><FollowersPage/></span>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <span class={classes.tabpanel}><FollowingPage/></span>
+        <span className={classes.tabpanel}>FOLLOWING</span>
       </TabPanel>
     </Box>
   );
