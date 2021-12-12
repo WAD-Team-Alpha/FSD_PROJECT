@@ -5,15 +5,19 @@ import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store/auth";
 import { sendAuthData, fetchAuthData } from "./store/auth-actions";
-
+import {sendProfileData, fetchProfileData} from './store/profile-actions'
 const App = () => {
   const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
+  const aboutData = useSelector((state) => state.profile);
   // var isStart = true;
   useEffect(() => {
     dispatch(fetchAuthData());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchProfileData());
   }, [dispatch]);
   useEffect(() => {
     // if (isStart) {
@@ -22,6 +26,9 @@ const App = () => {
     // }
     dispatch(sendAuthData(isAuth));
   }, [isAuth, dispatch]);
+  useEffect(() => {
+    dispatch(sendProfileData(aboutData));
+  }, [aboutData, dispatch]);
 
   const signinHandler = () => {
     setSignup(false);

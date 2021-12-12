@@ -8,7 +8,7 @@ import { profileActions } from "../../store/profile";
 const About = () => {
   const dispatch = useDispatch();
   const aboutInfo = useSelector((state) => state.profile);
-  const [inp, Setinp] = useState(true);
+  const [inp, Setinp] = useState(false);
   const userInfo = {
     firstName: aboutInfo.firstName,
     lastName: aboutInfo.lastName,
