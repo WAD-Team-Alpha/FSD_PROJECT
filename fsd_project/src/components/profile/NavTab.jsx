@@ -67,7 +67,7 @@ export default function BasicTabs() {
         <span className={classes.tabpanel}><FollowersPage/></span>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <span className={classes.tabpanel}>FOLLOWING</span>
+        <span className={classes.tabpanel}><FollowingPage/></span>
       </TabPanel>
     </Box>
   );
