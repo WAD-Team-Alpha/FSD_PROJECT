@@ -1,11 +1,8 @@
 import React from "react";
 import classes from "./Signin.module.css";
-import { useState } from "react";
-import Signup from "./Signup";
 import { Container } from "@mui/material";
 import SigninInput from "./SigninInput";
 import { makeStyles } from "@mui/styles";
-
 
 const useStyles = makeStyles({
   body: {
@@ -19,12 +16,17 @@ const useStyles = makeStyles({
 });
 
 const Signin = (props) => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
   const classesDesign = useStyles();
-  
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    props.loginHandler(email, password);
+  };
 
   return (
     <div>
-      <div className={classes.backdrop} onClick={props.closeHandler}/>
+      <div className={classes.backdrop} onClick={props.closeHandler} />
       <div className={classes.modal}>
         <div className={classes.container}>
           <div className={classes.container__wrapper}>
@@ -34,9 +36,9 @@ const Signin = (props) => {
         <h1 style={{ textAlign: "center", marginTop: "0.5em" }}>
           Signin to your Account
         </h1>
-        <form onSubmit={props.loginHandler}>
+        <form onSubmit={onSubmitHandler}>
           <Container maxWidth="xl" className={classesDesign.body}>
-            <SigninInput/>
+            <SigninInput setEmail={setEmail} setPassword={setPassword} />
             <br />
             <button type="submit" className={classes.logbutton} onClick="#">
               <span>Sign in</span>

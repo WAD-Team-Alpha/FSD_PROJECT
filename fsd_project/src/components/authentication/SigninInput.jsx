@@ -8,9 +8,8 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Grid from "@mui/material/Grid";
 
-export default function SigninInput() {
+export default function SigninInput(props) {
   const [showPassword, setShowPassword] = React.useState(false);
-  
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -33,6 +32,7 @@ export default function SigninInput() {
               label="Email"
               variant="outlined"
               size="small"
+              onChange={(val) =>{props.setEmail(val.target.value)}}
               required
               InputProps={{
                 startAdornment: (
@@ -50,6 +50,7 @@ export default function SigninInput() {
               type={showPassword ? "text" : "password"}
               label="Password"
               variant="outlined"
+              onChange={(val) =>{props.setPassword(val.target.value)}}
               size="small"
               required
               InputProps={{
