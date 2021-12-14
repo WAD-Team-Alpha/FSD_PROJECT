@@ -8,7 +8,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Grid from "@mui/material/Grid";
 
-export default function SignupInput() {
+export default function SignupInput(props) {
   const [showPassword1, setShowPassword1] = React.useState(false);
   const [showPassword2, setShowPassword2] = React.useState(false);
 
@@ -33,6 +33,7 @@ export default function SignupInput() {
               variant="outlined"
               size="small"
               required
+              onChange={(val)=>{props.setFirstName(val.target.value)}}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
@@ -43,6 +44,7 @@ export default function SignupInput() {
               variant="outlined"
               size="small"
               required
+              onChange={(val)=>{props.setLastName(val.target.value)}}
             />
           </Grid>
           <Grid item xs={12} sm={12} md={12}>
@@ -54,6 +56,7 @@ export default function SignupInput() {
               variant="outlined"
               size="small"
               required
+              onChange={(val)=>{props.setEmail(val.target.value)}}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -72,6 +75,7 @@ export default function SignupInput() {
               variant="outlined"
               size="small"
               required
+              onChange={(val)=>{props.setPassword(val.target.value)}}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -96,6 +100,7 @@ export default function SignupInput() {
               label="Confirm Password"
               variant="outlined"
               size="small"
+              onChange={(val)=>{props.setCPassword(val.target.value)}}
               required
               InputProps={{
                 endAdornment: (

@@ -1,4 +1,5 @@
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
 import {
   blue,
   blueGrey,
@@ -13,6 +14,7 @@ import NavTab from "./NavTab";
 import classes from "./profile.module.css";
 
 const Profile = () => {
+  const profileName = useSelector((state)=>state.profile.firstName);
   return (
     <div>
       <div className={classes.maincontainer}>
@@ -23,7 +25,7 @@ const Profile = () => {
         </div>
 
         <div className={classes.uname}>
-          <span className={classes.username}>USERNAME</span>
+          <span className={classes.username}>{profileName !== "" ? profileName : "USERNAME"}</span>
           <div className={classes.followbutton}>
             <Follow />
           </div>
