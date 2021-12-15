@@ -3,25 +3,29 @@ import React, { useState, useEffect } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
-import { authActions } from "./components/store/auth";
-import { sendAuthData, fetchAuthData } from "./components/store/auth-actions";
+import { signinAction, signupAction } from "./store/auth-actions";
+import { sendProfileData, fetchProfileData } from "./store/profile-actions";
+import { authActions } from "./store/auth";
 
 const App = () => {
   const dispatch = useDispatch();
   const [signup, setSignup] = useState(false);
   const [signin, setSignin] = useState(false);
-  const isAuth = useSelector((state) => state.auth.isAuthenticated);
-  var isStart = true;
+  const isAuth = useSelector((state) => state.auth);
+  const aboutData = useSelector((state) => state.profile);
+
+  var isStart = false;
   useEffect(() => {
-    dispatch(fetchAuthData());
+    if (localStorage.getItem("idToken") !== null) {
+      dispatch(
+        authActions.login({
+          idToken: localStorage.getItem("idToken"),
+          localId: localStorage.getItem("localId"),
+        })
+      );
+    }
   }, []);
-  useEffect(() => {
-    // if (isStart) {
-    //   isStart = false;
-    //   return
-    // }
-    dispatch(sendAuthData(isAuth));
-  }, [isAuth, dispatch]);
+  
 
   const signinHandler = () => {
     setSignup(false);
@@ -31,13 +35,18 @@ const App = () => {
   const signupHandler = () => {
     setSignup(true);
     setSignin(false);
-    // console.log("login handler");
   };
-  const loginHandler = () => {
+  const signupHandle = (email, password, firstname, lastname) => {
     setSignup(false);
     setSignin(false);
-    dispatch(authActions.login(true));
-    // console.log("login handler");
+    console.log("Signup function", email, password);
+    dispatch(signupAction(email, password, firstname, lastname));
+  };
+  const loginHandler = (email, password) => {
+    setSignup(false);
+    setSignin(false);
+    dispatch(signinAction(email, password));
+    console.log("login handler", email, password);
   };
   const closeHandler = () => {
     setSignup(false);
@@ -50,7 +59,7 @@ const App = () => {
       {signup && (
         <Signup
           signinHandler={signinHandler}
-          loginHandler={loginHandler}
+          loginHandler={signupHandle}
           closeHandler={closeHandler}
         />
       )}

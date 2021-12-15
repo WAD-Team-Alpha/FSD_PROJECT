@@ -7,8 +7,8 @@
 
 .avatar{
   margin-left: 11em;
-  /* margin-top: -1em; */
-  padding-top: 2em;
+  margin-top: 0.8em;
+  padding-top: 5em;
 }
 
 
@@ -162,7 +162,7 @@ padding-left: 2px;
   cursor: pointer;
   /* color: black; */
   background-color: white;
-  margin-top: 0.3em;
+  margin-top: 1.2em;
 }
 
 .followersuname{
@@ -171,5 +171,10 @@ padding-left: 2px;
 
 .followersButton{
   position: absolute;
+  
+}
+
+.followersAvatar{
+  margin-top: 1em;
 }
 

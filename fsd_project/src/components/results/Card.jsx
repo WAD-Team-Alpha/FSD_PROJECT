@@ -12,7 +12,6 @@ import { makeStyles } from "@mui/styles";
 import BasicRating from "./rating";
 import Image from "../../img/contemplative-reptile.jpg";
 import CardHeader from "@mui/material/CardHeader";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange } from "@mui/material/colors";
 
