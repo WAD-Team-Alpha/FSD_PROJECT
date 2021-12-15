@@ -1,10 +1,20 @@
 import { authActions } from "./auth";
-
-export const fetchAuthData = () => {
+import {API_KEY} from '../keys';
+export const signinAction = (email, password) => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json"
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
+          method: 'POST',
+          body: JSON.stringify({
+            email: email,
+            password: password,
+            returnSecureToken: true,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
       );
 
       if (!response.ok) {
@@ -18,26 +28,31 @@ export const fetchAuthData = () => {
 
     try {
       const authData = await fetchData();
-      dispatch(authActions.login(authData.isAuthenticated));
+      dispatch(authActions.login(authData));
     } catch (error) {
       console.log("error");
     }
   };
 };
 
-export const sendAuthData = (isAuth) => {
+export const signupAction = (email, password, firstname, lastName) => {
   return async (dispatch) => {
     console.log("sending");
 
     const sendRequest = async () => {
-      console.log(isAuth);
+      // console.log(isAuth);
       const response = await fetch(
-        "https://fsd-project-e2e42-default-rtdb.firebaseio.com/auth.json",
+        `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
         {
-          method: "PUT",
+          method: 'POST',
           body: JSON.stringify({
-            isAuthenticated: isAuth,
+            email: email,
+            password: password,
+            returnSecureToken: true,
           }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
         }
       );
 
@@ -47,8 +62,8 @@ export const sendAuthData = (isAuth) => {
     };
 
     try {
-      await sendRequest();
-
+      const authData = await sendRequest();
+      dispatch(authActions.login(authData));
       console.log("Success");
     } catch (error) {
       console.log("error");
