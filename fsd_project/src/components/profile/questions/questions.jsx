@@ -16,7 +16,7 @@ function Item(props) {
         p: 1,
         m: 1,
         borderRadius: 1,
-        textAlign: 'center',
+        // textAlign: 'center',
         fontSize: '1rem',
         fontWeight: '700',
         ...sx,
