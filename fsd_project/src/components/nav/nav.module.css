@@ -1,23 +1,25 @@
 .nav{
-  padding-bottom: 1em;
-  border: 1px solid;
- 
-
-}
-
-.item{
-    display: inline-block;
-    margin-left: 30px;
-    padding-left: 100px;
-    margin-top: 10px;
-}
-
-.item a {
-    text-decoration: none;
-    font-size: large;
-}
-.item img {
-    height: 50px;
-    width: 50px;
-}
-
+    padding-bottom: 1em;
+    border: 1px solid;
+   
+  
+  }
+  
+  .item{
+      display: inline-block;
+      margin-left: 30px;
+      padding-left: 100px;
+      margin-top: 30px;
+  
+  }
+  
+  .item a {
+      text-decoration: none;
+      font-size: large;
+  }
+  .item img {
+      height: 50px;
+      width: 50px;
+  }
+  
+  

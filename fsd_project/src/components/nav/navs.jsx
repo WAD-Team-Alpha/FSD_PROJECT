@@ -12,8 +12,8 @@ const styles = muiBaseTheme => ({
   card: {
     maxWidth: 80,
     maxHeight:80,
-    marginTop:20,
-    margin: "auto",
+    
+   
    
   },
   media: {
@@ -23,7 +23,7 @@ const styles = muiBaseTheme => ({
   },
   content: {
    
-   paddingTop:-10,
+   paddingTop:10,
     
   },
  
