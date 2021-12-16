@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles } from "@mui/styles";
+
 
 import Button from '@mui/material/Button';
 
@@ -7,15 +7,18 @@ import SendIcon from '@mui/icons-material/Send';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ReplyIcon from '@mui/icons-material/Reply';
 import ChatSharpIcon from '@mui/icons-material/ChatSharp';
-const styles = muiBaseTheme => ({
+import { makeStyles } from "@mui/styles";
+const useStyles = makeStyles({
     btn: {
         marginLeft: 200,
     }
-});
+  });
+
 
 const imgLink = "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 
-function Comment(classes) {
+function Comment() {
+    const classes = useStyles();
     return (
 
         <div className="container mt-2 ">
@@ -101,5 +104,5 @@ function Comment(classes) {
     );
 }
 
-const Diso = withStyles(styles)(Comment);
-export default Diso
+
+export default Comment
