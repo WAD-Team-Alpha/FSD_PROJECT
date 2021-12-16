@@ -57,14 +57,15 @@ padding-left: 2px;
 .aboutformedit{
 
   color: white;
-  margin-left: 30em;
+  margin-left: 33em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-
+  
+  
   
 
 }
@@ -114,7 +115,8 @@ padding-left: 2px;
 }
 
 .aboutformedit :hover {
-  background-color: #5CDB95;
+  background-color: lightskyblue;
+  border-radius:100%;
 }
 
 .followbutton{

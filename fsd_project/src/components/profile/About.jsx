@@ -1,5 +1,5 @@
 import classes from "./profile.module.css";
-
+import EditIcon from '@mui/icons-material/Edit';
 import React, { useState } from "react";
 import Enabled from "./Enabled";
 import Disabled from "./Disabled";
@@ -62,14 +62,12 @@ const About = () => {
     <div className={classes.mainabout}>
       <div className={classes.aboutformedit}>
         {!inp && (
-          <button
-            className={classes.edit_button}
-            onClick={() => {
-              Setinp(true);
-            }}
-          >
-            Edit
-          </button>
+          <EditIcon onClick={() => {
+            Setinp(true);
+          }} sx={{color : "blue", fontSize: "30px"}}>
+            
+            
+        </EditIcon>
         )}
       </div>
       {inp && (
