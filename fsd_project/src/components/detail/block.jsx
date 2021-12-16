@@ -5,20 +5,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { withStyles } from "@mui/styles";
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-const styles = muiBaseTheme => ({
+import { makeStyles } from '@mui/styles';
+const useStyles = makeStyles({
   rating: {
-   marginLeft:400,
-   fontSize: 15,
- 
-  },
- 
+    marginLeft:400,
+    fontSize: 15,
+  
+   },
+  
 });
 
- function MediaCard({ classes }) {
+
+ function MediaCard() {
   const [value, setValue] = React.useState(3);
+  const classes = useStyles();
   return (
     <Card sx={{ maxWidth: 800 }}>
       <CardMedia
@@ -53,5 +55,5 @@ const styles = muiBaseTheme => ({
   );
 }
 
-const Demo = withStyles(styles)(MediaCard);
-export default Demo
+
+export default MediaCard

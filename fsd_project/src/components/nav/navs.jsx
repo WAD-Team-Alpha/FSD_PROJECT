@@ -4,11 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import { withStyles } from "@mui/styles";
 
 
+import { makeStyles } from "@mui/styles";
 
-const styles = muiBaseTheme => ({
+const useStyles = makeStyles({
   card: {
     maxWidth: 80,
     maxHeight:80,
@@ -32,10 +32,12 @@ const styles = muiBaseTheme => ({
     fontSize: 15,
     marginTop:-10 ,
   }
-  
 });
 
-function card({ classes }) {
+
+
+function WrappedApp(props) {
+  const classes = useStyles();
   return (
     <div className="card">
       <Card className={classes.card}>
@@ -46,7 +48,7 @@ function card({ classes }) {
           }
         />
         <CardContent className={classes.content}>
-        <Typography ><p className={classes.dist}>Moblie</p></Typography>
+        <Typography ><p className={classes.dist}>{props.type}</p></Typography>
           
          
         </CardContent>
@@ -57,6 +59,6 @@ function card({ classes }) {
 
 
 
-const WrappedApp = withStyles(styles)(card);
+
 export default WrappedApp
 
