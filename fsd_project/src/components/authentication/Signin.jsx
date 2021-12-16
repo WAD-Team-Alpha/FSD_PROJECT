@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./Signin.module.css";
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import SigninInput from "./SigninInput";
 import { makeStyles } from "@mui/styles";
+
 
 const useStyles = makeStyles({
   body: {
@@ -51,9 +52,9 @@ const Signin = (props) => {
         </h4>
         <h4 style={{ textAlign: "center", marginTop: "1em", fontSize: "15px" }}>
           Dont have an Account?? Click here to{" "}
-          <button className="btn btn-primary" onClick={props.signupHandler}>
+          <Link href="#" onClick={props.signupHandler}>
             SignUp
-          </button>
+          </Link>
         </h4>
       </div>
     </div>
