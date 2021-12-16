@@ -1,13 +1,14 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { deepOrange, deepPurple } from "@mui/material/colors";
+import {deepOrange} from "@mui/material/colors";
 import classes from "./profile.module.css";
-import { width } from "@mui/system";
 import { Link } from "@mui/material";
+import HandleFollowing from "./HandleFollowing";
 
-const FollowingPage = () => {
+const FollowingPage = (props) => {
   const names = ["peter", "elon", "joseph", "steve"];
+  
   return (
     <div className={classes.MM}>
       {names.map((follower) => (
@@ -20,7 +21,7 @@ const FollowingPage = () => {
             <div style={{ color: "black", marginTop:"1.5em"}}>{follower}</div>
           </Link>
           <div className={classes.followersButton}>
-            <button className={classes.followersFollowButton}>Follow</button>
+           <HandleFollowing following={props.following} toggleFollowing={props.toggleFollowing}/> 
           </div>
           
         </Stack>

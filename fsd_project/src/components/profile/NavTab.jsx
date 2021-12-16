@@ -35,7 +35,7 @@ function TabPanel(props) {
 
 
 
-export default function BasicTabs() {
+export default function BasicTabs(props) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -64,10 +64,10 @@ export default function BasicTabs() {
         <span className={classes.tabpanel}><Posts/></span>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <span className={classes.tabpanel}><FollowersPage/></span>
+        <span className={classes.tabpanel}><FollowersPage followers={props.followers} toggleFollowers={props.toggleFollowers}/></span>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <span className={classes.tabpanel}><FollowingPage/></span>
+        <span className={classes.tabpanel}><FollowingPage following={props.following} toggleFollowing={props.toggleFollowing}/></span>
       </TabPanel>
     </Box>
   );
