@@ -1,5 +1,6 @@
 import { authActions } from "./auth";
 import {API_KEY} from '../keys';
+import { profileActions } from "./profile";
 export const signinAction = (email, password) => {
   return async (dispatch) => {
     const fetchData = async () => {
@@ -59,11 +60,24 @@ export const signupAction = (email, password, firstname, lastName) => {
       if (!response.ok) {
         throw new Error("Sending data failed.");
       }
+      const data = await response.json();
+
+      return data;
     };
 
     try {
       const authData = await sendRequest();
-      dispatch(authActions.login(authData));
+      await dispatch(authActions.login(authData));
+      await dispatch(profileActions.update({
+        firstName: firstname,
+        lastName: lastName,
+        email: email,
+        university: "",
+        degree: "",
+        graduationYear: "",
+        location: "",
+        bio: "",
+      }));
       console.log("Success");
     } catch (error) {
       console.log("error");
