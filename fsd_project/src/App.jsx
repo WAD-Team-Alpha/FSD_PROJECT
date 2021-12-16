@@ -1,11 +1,12 @@
 import Main from "./components/main/main";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Signup from "./components/authentication/Signup";
 import Signin from "./components/authentication/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { signinAction, signupAction } from "./store/auth-actions";
 import { sendProfileData, fetchProfileData } from "./store/profile-actions";
 import { authActions } from "./store/auth";
+import { profileActions } from "./store/profile";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const App = () => {
   const isAuth = useSelector((state) => state.auth);
   const aboutData = useSelector((state) => state.profile);
 
-  var isStart = false;
+  const firstUpdate = useRef(true);
   useEffect(() => {
     if (localStorage.getItem("idToken") !== null) {
       dispatch(
@@ -25,6 +26,21 @@ const App = () => {
       );
     }
   }, []);
+  useEffect(()=>{
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
+    console.log("send data is triggered");
+    dispatch(sendProfileData(aboutData,isAuth.localId))
+  },[aboutData])
+  useEffect(()=>{
+    console.log("fetch data is triggered");
+    if (localStorage.getItem("idToken") !== null) {
+      console.log("fetch data is triggered");
+      dispatch(fetchProfileData(localStorage.getItem("localId")))
+    }
+  },[])
   
 
   const signinHandler = () => {

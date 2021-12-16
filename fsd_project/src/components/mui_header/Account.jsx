@@ -10,7 +10,7 @@ import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../store/auth";
-
+import { Link } from "react-router-dom";
 const AccountMenu = () => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -66,7 +66,8 @@ const AccountMenu = () => {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem sx={{ fontSize: "0.9em" }}>
-          <Avatar /> Profile
+          <Link to="/profile"><Avatar /> Profile</Link>
+          
         </MenuItem>
         <Divider />
         <MenuItem sx={{ fontSize: "0.9em" }}>

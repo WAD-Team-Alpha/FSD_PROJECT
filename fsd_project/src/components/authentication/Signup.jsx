@@ -3,6 +3,7 @@ import classes from "./Signup.module.css";
 import SignupInput from "./SignupInput";
 import { Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { Link } from "@mui/material";
 
 const useStyles = makeStyles({
   body: {
@@ -55,10 +56,10 @@ const Signup = (props) => {
           <a href="{}">Signin with your Google Account</a>
         </h4>
         <h4 style={{ textAlign: "center", marginTop: "1em", fontSize: "15px" }}>
-          Already have an Account?? Click here to
-          <button className="btn btn-primary" onClick={props.signinHandler}>
+          Already have an Account?? Click here to {" "}
+          <Link href="#" onClick={props.signinHandler}>
             Signin
-          </button>
+          </Link>
         </h4>
       </div>
     </div>

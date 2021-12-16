@@ -9,13 +9,13 @@ const Nav = () =>{
         
         <div className="col-sm-2" className={classes.item} >
         <a href="#">
-            <WrappedApp/>
+            <WrappedApp type="Technology"/>
             </a>
         </div>
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-            <WrappedApp/>
+            <WrappedApp type="Dress"/>
 
             </a>
                 
@@ -23,7 +23,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-            <WrappedApp/>
+            <WrappedApp type="Gadgets"/>
 
             </a>
                 
@@ -31,7 +31,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-            <WrappedApp/>
+            <WrappedApp type="Coding"/>
 
             </a>
                 
@@ -39,7 +39,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-            <WrappedApp/>
+            <WrappedApp type="Book"/>
 
             </a>
                 
@@ -47,7 +47,7 @@ const Nav = () =>{
         <div className="col-sm-2" className={classes.item} >
             <a href="#">
                  
-            <WrappedApp/>
+            <WrappedApp type="Traval"/>
 
             </a>
                 

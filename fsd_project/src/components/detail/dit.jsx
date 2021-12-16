@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./dit.module.css";
-import Diso from "./commant";
+import Comment from "./commant";
 import { StyledEngineProvider } from '@mui/material/styles';
 import Demo from './block';
 
@@ -32,7 +32,7 @@ const Details = () => {
 
             <div className={class1} >
                 
-<Diso></Diso>
+<Comment></Comment>
 
             </div>
         </div>

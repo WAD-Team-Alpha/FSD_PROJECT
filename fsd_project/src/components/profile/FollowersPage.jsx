@@ -5,10 +5,14 @@ import { deepOrange, deepPurple } from "@mui/material/colors";
 import classes from "./profile.module.css";
 import { width } from "@mui/system";
 import { Link } from "@mui/material";
+import { useState } from "react";
+import HandleFollow from "./HandleFollow";
 
-const FollowersPage = () => {
-  const names = ["alex", "brian", "syd", "john"];
-  return (
+const FollowersPage = (props) => {
+  const names = ["alex", "brian", "syd", "john", "jeremy", "ryan"];
+ 
+  
+ return (
     <div className={classes.MM}>
       {names.map((follower) => (
         <Stack direction="row" spacing={2} padding={0.6}>
@@ -16,17 +20,17 @@ const FollowersPage = () => {
             sx={{ bgcolor: deepOrange[500], width: 40 }}
             src="/broken-image.jpg"
           ></Avatar>
-          <Link   href="https://google.com" underline="hover">
+          <Link   href="#" underline="hover">
             <div style={{ color: "black", marginTop:"1.5em"}}>{follower}</div>
           </Link>
           <div className={classes.followersButton}>
-            <button className={classes.followersFollowButton}>Follow</button>
+            <HandleFollow followers={props.followers} toggleFollowers={props.toggleFollowers}/>
           </div>
           
         </Stack>
          
       ))}
-      
+        
     </div>
     
   );
