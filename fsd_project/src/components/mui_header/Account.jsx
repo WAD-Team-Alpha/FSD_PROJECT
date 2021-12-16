@@ -8,10 +8,22 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
+import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../store/auth";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  links: {
+    textDecoration: "none",
+    display: "flex",
+    fontSize: "1.4em",
+  },
+});
+
 const AccountMenu = () => {
+  const style = useStyles();
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -66,8 +78,7 @@ const AccountMenu = () => {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem sx={{ fontSize: "0.9em" }}>
-          <Link to="/profile"><Avatar /> Profile</Link>
-          
+          <Link to="/profile" className={style.links}><Avatar /><Typography sx={{padding: "0.2em", color: "#3d3d3d"}}>Profile</Typography></Link>
         </MenuItem>
         <Divider />
         <MenuItem sx={{ fontSize: "0.9em" }}>
