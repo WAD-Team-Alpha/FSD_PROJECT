@@ -8,6 +8,7 @@ import About from './About';
 import FollowersPage from './FollowersPage';
 import Posts from './posts/posts';
 import FollowingPage from './FollowingPage';
+import Questions from './questions/questions';
 
 
 
@@ -58,7 +59,7 @@ export default function BasicTabs() {
         <span className={classes.tabpanel}><About/></span>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <span className={classes.tabpanel}>QUESTIONS</span>
+        <span className={classes.tabpanel}><Questions/></span>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <span className={classes.tabpanel}><Posts/></span>
