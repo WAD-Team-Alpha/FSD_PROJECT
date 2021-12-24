@@ -9,6 +9,9 @@ import Layout from '../../Layout'
 import Descrption from "../detail/dit";
 import { Details } from "@mui/icons-material";
 import { useSelector } from "react-redux";
+
+import NewProfile from "../NewProfile/newProfile";
+
 const Main = (props) => {
   const isAuth = useSelector((state) => state.auth);
   return (
@@ -22,6 +25,8 @@ const Main = (props) => {
               {isAuth.isAuthenticated && <Route path="/profile" element={<Profile />} />}
               <Route path="/description" element={<Descrption />} />
               <Route path="*" element={<Home/>} />
+              <Route path="/new-profile" element={<NewProfile/>} />
+
             </Routes>
           </Layout>
         </Router>
