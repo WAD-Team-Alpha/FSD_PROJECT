@@ -17,17 +17,9 @@ import { useState } from "react";
 const Profile = () => {
   const profileName = useSelector((state)=>state.profile.firstName);
 
-  const[followers,setFollowers] = useState(6)
-  const[following,setFollowing] = useState(4)
   
-  const toggle = (counter) => {
-    setFollowers((counterPrev) => counterPrev + counter)
-  }
-
-  const toggleFollowing = (counter) => {
-    setFollowing((counterPrev) => counterPrev + counter)
-  }
-
+  
+ 
   
   return (
     <div>
@@ -41,12 +33,12 @@ const Profile = () => {
         <div className={classes.uname}>
           <span className={classes.username}>{profileName !== "" ? profileName : "USERNAME"}</span>
           <div className={classes.followbutton}>
-            <Follow followers={followers} toggle={toggle} following={following}/>
+            <Follow />
           </div>
         </div>
 
         <div className={classes.unav}>
-          <NavTab followers={followers} following={following} toggleFollowers={toggle} toggleFollowing={toggleFollowing}/>
+          <NavTab />
         </div>
 
         

@@ -7,14 +7,16 @@ import { width } from "@mui/system";
 import { Link } from "@mui/material";
 import { useState } from "react";
 import HandleFollow from "./HandleFollow";
+import { useSelector } from "react-redux";
 
 const FollowersPage = (props) => {
-  const names = ["alex", "brian", "syd", "john", "jeremy", "ryan"];
- 
+  // const names = ["alex", "brian", "syd", "john", "jeremy", "ryan"];
+  const followernames = useSelector((state)=> state.counter.followerslist)
+  console.log(followernames)
   
  return (
     <div className={classes.MM}>
-      {names.map((follower) => (
+      {followernames.map((follower) => (
         <Stack direction="row" spacing={2} padding={0.6}>
           <Avatar className={classes.followersAvatar}
             sx={{ bgcolor: deepOrange[500], width: 40 }}
@@ -22,9 +24,10 @@ const FollowersPage = (props) => {
           ></Avatar>
           <Link   href="#" underline="hover">
             <div style={{ color: "black", marginTop:"1.5em"}}>{follower}</div>
+            {console.log(follower)}
           </Link>
           <div className={classes.followersButton}>
-            <HandleFollow followers={props.followers} toggleFollowers={props.toggleFollowers}/>
+            <HandleFollow />
           </div>
           
         </Stack>

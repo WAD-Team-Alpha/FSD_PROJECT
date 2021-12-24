@@ -1,0 +1,84 @@
+.col-8{
+    height:700px;
+    width:66.66%;
+}
+
+.col-4{
+    height:700px;
+}
+
+.maincontainer{
+    padding-top: 1em;
+    padding-left: 2em;
+    overflow: hidden;
+    padding-bottom: 6em;
+}
+
+.container-md{
+    height: 950px;
+    background-color: #05386B;
+    padding-top: 2em;
+
+
+}
+
+.pcontainer{
+    background-color: white;
+    height: 130px;
+    padding-top: 1em;
+    padding-left: 1em;
+    
+}
+
+.col-sm{
+    background-color: white;
+    height: 100px;
+    padding-top: 1em;
+    
+}
+
+.uname{
+    padding-right: 15.5em;
+    color: black;
+    font-size: 24px;
+
+}
+
+.col-md{
+    background-color: white;
+    height:100px;
+    padding-left: 3em;
+}
+
+.followercount{
+    font-size: 24px;
+    color: black;
+    margin-left: 1.2em;
+}
+
+.followingcount{
+    font-size: 24px;
+    color: black;
+    margin-left: 1.2em;
+}
+
+.mainfollowers,.mainfollowing{
+    color: grey;
+
+}
+
+.editbutton{
+    width: 10px;
+}
+
+.genres,.email,.bio{
+    margin-left: 1em;
+    margin-top: 2em;
+    color: black;
+}
+
+.btn{
+    margin-left: 2.8em;
+    margin-top: 2em;
+    width: 300px;
+}

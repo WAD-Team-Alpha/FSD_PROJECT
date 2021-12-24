@@ -21,7 +21,7 @@ const FollowingPage = (props) => {
             <div style={{ color: "black", marginTop:"1.5em"}}>{follower}</div>
           </Link>
           <div className={classes.followersButton}>
-           <HandleFollowing following={props.following} toggleFollowing={props.toggleFollowing}/> 
+           <HandleFollowing /> 
           </div>
           
         </Stack>
